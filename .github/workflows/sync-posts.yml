@@ -1,0 +1,61 @@
+name: Publish daily post to GitHub
+
+# Runs at 11:15 a.m. US Eastern every day, 25 minutes after the daily post
+# goes live on Vercel. GitHub cron uses UTC, so both 15:15 UTC (11:15 EDT)
+# and 16:15 UTC (11:15 EST) are scheduled, and the job skips whichever one
+# lands before 11 a.m. Eastern. The sync is idempotent, so an extra run
+# never creates a duplicate commit.
+on:
+  schedule:
+    - cron: "15 15 * * *"
+    - cron: "15 16 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-posts
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Only run at or after 11 a.m. Eastern
+        id: gate
+        run: |
+          hour=$(TZ=America/New_York date +%H)
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] || [ "$hour" -ge 11 ]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "It is ${hour}:xx in New York; skipping this early trigger."
+            echo "run=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/checkout@v4
+        if: steps.gate.outputs.run == 'true'
+
+      - uses: actions/setup-python@v5
+        if: steps.gate.outputs.run == 'true'
+        with:
+          python-version: "3.12"
+
+      - name: Copy new posts from the live site
+        if: steps.gate.outputs.run == 'true'
+        run: python scripts/sync_posts.py
+
+      - name: Commit and push
+        if: steps.gate.outputs.run == 'true'
+        run: |
+          if [ -z "$(git status --porcelain posts)" ]; then
+            echo "No new posts to publish."
+            exit 0
+          fi
+          latest=$(python -c "import json;print(json.load(open('posts/index.json'))['posts'][0])")
+          title=$(python -c "import json;print(json.load(open('posts/${latest}.json'))['title'])")
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add posts
+          git commit -m "Blog post ${latest}: ${title}"
+          git push

@@ -21,7 +21,10 @@ It is a static site with no build step. Every page is plain HTML, CSS and JavaSc
 2. Add the same `YYYY-MM-DD` to the top of the list in `posts/index.json`.
 3. Deploy.
 
-A scheduled task publishes a new AI agent adoption post every day at about 11 a.m. Eastern by deploying straight to Vercel.
+## Daily publishing
+
+1. **10:50 a.m. Eastern:** a scheduled Claude task researches AI agent adoption, writes a post and deploys it straight to Vercel, so it is live by about 11 a.m.
+2. **11:15 a.m. Eastern:** the GitHub Actions workflow `.github/workflows/sync-posts.yml` runs `scripts/sync_posts.py`. The script copies any new posts from the live site into `posts/`, and the workflow commits them here. You can also run it by hand from the Actions tab ("Publish daily post to GitHub" → "Run workflow").
 
 ## Running locally
 
