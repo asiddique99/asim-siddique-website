@@ -1,0 +1,533 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Asim Siddique</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Asim Siddique — security, compliance and enterprise infrastructure leader with 30+ years keeping mission-critical systems up.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: dark operations-room hero (Martell) → stats strip (Godin) → short-line "why" story (Martell)
+   → expertise groups → spec-card grid of selected work (Koe) → timeline → credentials → contact band.
+   Display = condensed industrial poster face; body = IBM Plex (the mainframe world he works in); mono = console labels. */
+:root{
+  --bg:#0B1F17; --surface:#10291F; --surface-2:#163428; --line:#25463A;
+  --fg:#E9F2ED; --muted:#9DB6A9; --accent:#D8B46A; --accent-ink:#1C1606; --ok:#8BDDA6;
+  --display:"Big Shoulders Display","Arial Narrow",Impact,sans-serif;
+  --body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Consolas,monospace;
+  --max:1160px; --r:14px;
+  color-scheme:dark;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0}
+img{max-width:100%}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+
+.wrap{max-width:var(--max);margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+@media (min-width:720px){.wrap{padding-left:max(32px,env(safe-area-inset-left,0px));padding-right:max(32px,env(safe-area-inset-right,0px))}}
+section{scroll-margin-top:80px}
+
+.eyebrow{font-family:var(--mono);font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);display:flex;align-items:center;gap:10px;margin:0 0 18px}
+.eyebrow::before{content:"";width:28px;height:1px;background:currentColor}
+h1,h2,h3{text-wrap:balance;margin:0}
+h2{font-family:var(--display);font-weight:800;text-transform:uppercase;font-size:clamp(38px,5.4vw,60px);line-height:.98;letter-spacing:.005em}
+h2 .dim{color:var(--muted)}
+.lede{color:var(--muted);max-width:60ch;margin:16px 0 0}
+
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--body);font-weight:600;font-size:15px;text-decoration:none;padding:12px 20px;border-radius:999px;border:1px solid transparent;cursor:pointer;transition:transform .15s ease,background .15s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn-primary{background:var(--accent);color:var(--accent-ink)}
+.btn-ghost{border-color:var(--line);color:var(--fg);background:transparent}
+.btn-ghost:hover{background:var(--surface-2)}
+
+/* NAV */
+header.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;gap:16px;height:68px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:600;letter-spacing:.01em}
+.mono-mark{width:34px;height:34px;border-radius:8px;background:var(--fg);color:var(--bg);display:grid;place-items:center;font-family:var(--display);font-weight:900;font-size:17px;letter-spacing:.02em}
+.nav-links{display:flex;gap:26px;list-style:none;margin:0;padding:0;font-size:14.5px}
+.nav-links a{text-decoration:none;color:var(--muted)}
+.nav-links a:hover{color:var(--fg)}
+@media (max-width:880px){.nav-links{display:none}}
+
+/* HERO */
+.hero{padding-block:72px 64px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(60% 70% at 85% 30%,color-mix(in srgb,var(--accent) 14%,transparent),transparent 70%);}
+.hero-grid{display:grid;grid-template-columns:1.25fr .85fr;gap:56px;align-items:center;position:relative;z-index:1}
+@media (max-width:900px){.hero-grid{grid-template-columns:1fr;gap:40px}}
+.status{font-family:var(--mono);font-size:13px;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px 14px;margin-bottom:22px}
+.status b{color:var(--ok);font-weight:500}
+.hero h1{font-family:var(--display);font-weight:900;text-transform:uppercase;font-size:clamp(52px,8.4vw,104px);line-height:.92;letter-spacing:.003em}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero p.sub{font-size:19px;color:var(--muted);max-width:52ch;margin:26px 0 32px}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px}
+
+.portrait{position:relative;max-width:400px;justify-self:end;width:100%}
+@media (max-width:900px){.portrait{justify-self:start;max-width:340px}}
+.portrait-frame{aspect-ratio:4/5;max-width:100%;border-radius:22px;background:var(--surface);border:1px solid var(--line);padding:14px;transform:rotate(-2deg);box-shadow:0 30px 60px -30px rgba(0,0,0,.55)}
+.portrait-inner{height:100%;border-radius:12px;position:relative;overflow:hidden;
+  background:
+    repeating-linear-gradient(0deg,transparent 0 23px,color-mix(in srgb,var(--line) 70%,transparent) 23px 24px),
+    linear-gradient(160deg,var(--surface-2),var(--bg));
+  display:grid;place-items:center}
+.portrait-inner .headshot{width:100%;height:100%;object-fit:cover;object-position:50% 30%;display:block}
+.portrait-inner .initials{font-family:var(--display);font-weight:900;font-size:clamp(120px,18vw,180px);line-height:1;color:var(--fg);opacity:.92;letter-spacing:-.02em}
+.portrait-inner .ph{position:absolute;top:14px;left:14px;font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.08em}
+.portrait-tag{position:absolute;left:50%;bottom:-16px;transform:translateX(-50%);white-space:nowrap;background:var(--fg);color:var(--bg);font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;padding:8px 14px;border-radius:999px}
+
+/* STATS */
+.stats{background:var(--surface);border-block:1px solid var(--line)}
+.stats-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:24px;padding-block:44px}
+@media (max-width:1000px){.stats-grid{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:520px){.stats-grid{grid-template-columns:repeat(2,1fr)}}
+.stat{min-width:0}
+.stat .n{font-family:var(--display);font-weight:800;font-size:clamp(40px,4.6vw,56px);line-height:1;color:var(--accent);font-variant-numeric:tabular-nums}
+.stat .l{font-size:13.5px;color:var(--muted);margin-top:8px;line-height:1.35}
+
+/* STORY */
+.story{padding-block:104px}
+.story-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:start}
+@media (max-width:900px){.story-grid{grid-template-columns:1fr;gap:36px}}
+.story-lines{display:grid;gap:14px;font-size:18.5px;color:var(--muted);max-width:58ch}
+.story-lines p{margin:0}
+.story-lines strong{color:var(--fg);font-weight:500}
+.era{display:grid;gap:0;margin-top:34px;border-top:1px solid var(--line)}
+.era div{display:grid;grid-template-columns:96px 1fr;gap:16px;padding:12px 0;border-bottom:1px solid var(--line);font-size:15px}
+.era span{font-family:var(--mono);color:var(--accent);font-size:13px;padding-top:2px}
+
+/* EXPERTISE */
+.expertise{padding-block:96px;background:var(--surface);border-block:1px solid var(--line)}
+.exp-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;margin-top:44px}
+@media (max-width:1000px){.exp-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.exp-grid{grid-template-columns:1fr}}
+.exp{background:var(--surface);padding:26px 24px 28px;min-width:0}
+.exp h3{font-family:var(--body);font-weight:600;font-size:17px;margin-bottom:12px}
+.exp .code{font-family:var(--mono);font-size:11.5px;color:var(--accent);letter-spacing:.1em;margin-bottom:10px;display:block}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chips span{font-size:13px;color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:3px 8px;line-height:1.4}
+
+/* WORK */
+.work{padding-block:104px}
+.work-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px}
+@media (max-width:980px){.cards{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:620px){.cards{grid-template-columns:1fr}}
+.card{display:flex;flex-direction:column;min-width:0}
+.spec{aspect-ratio:16/10;max-width:100%;border-radius:var(--r);background:var(--surface);border:1px solid var(--line);padding:20px;display:flex;flex-direction:column;justify-content:space-between;font-family:var(--mono);font-size:12.5px;color:var(--muted);position:relative;overflow:hidden}
+.spec .big{font-family:var(--display);font-weight:800;font-size:clamp(34px,3.6vw,46px);color:var(--fg);line-height:1;letter-spacing:.01em;text-transform:uppercase}
+.spec .big i{font-style:normal;color:var(--accent)}
+.spec .row{display:flex;justify-content:space-between;gap:10px}
+.spec::after{content:"";position:absolute;right:-40px;bottom:-40px;width:140px;height:140px;border-radius:50%;border:1px solid var(--line)}
+.card h3{font-family:var(--body);font-weight:600;font-size:19px;margin:18px 0 6px;line-height:1.3}
+.card p{margin:0;color:var(--muted);font-size:15.5px}
+.card .meta{font-family:var(--mono);font-size:12px;color:var(--accent);margin-top:12px;letter-spacing:.04em}
+
+/* TIMELINE */
+.experience{padding-block:96px;background:var(--surface);border-block:1px solid var(--line)}
+.tl{margin-top:44px;border-top:1px solid var(--line)}
+.role{display:grid;grid-template-columns:170px 1fr;gap:28px;padding:28px 0;border-bottom:1px solid var(--line)}
+@media (max-width:700px){.role{grid-template-columns:1fr;gap:8px}}
+.role .when{font-family:var(--mono);font-size:13.5px;color:var(--muted);font-variant-numeric:tabular-nums;padding-top:3px}
+.role .what{min-width:0}
+.role h3{font-size:20px;font-weight:600;line-height:1.3}
+.role .org{color:var(--accent);font-size:15px;margin-top:2px}
+.role ul{margin:12px 0 0;padding-left:18px;color:var(--muted);font-size:15.5px;display:grid;gap:6px;max-width:72ch}
+details.earlier{border-bottom:1px solid var(--line)}
+details.earlier summary{cursor:pointer;list-style:none;padding:22px 0;font-family:var(--mono);font-size:13.5px;color:var(--accent);letter-spacing:.06em}
+details.earlier summary::-webkit-details-marker{display:none}
+details.earlier summary::before{content:"+ ";}
+details.earlier[open] summary::before{content:"− ";}
+details.earlier .role:last-child{border-bottom:0}
+
+/* CREDENTIALS */
+.creds{padding-block:96px}
+.cred-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:40px}
+@media (max-width:800px){.cred-grid{grid-template-columns:1fr;gap:32px}}
+.cred-list{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.cred-list li{display:grid;grid-template-columns:1fr auto;gap:16px;padding:16px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.cred-list .t{font-weight:600}
+.cred-list .s{display:block;color:var(--muted);font-size:14.5px;font-weight:400}
+.cred-list .y{font-family:var(--mono);font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+.badges{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px}
+.badges span{font-family:var(--display);font-weight:800;font-size:22px;letter-spacing:.04em;border:1.5px solid var(--accent);color:var(--accent);border-radius:8px;padding:4px 14px}
+.sub-h{font-family:var(--mono);font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 14px}
+
+/* CONTACT */
+.contact{padding-block:0 104px}
+.contact-band{background:var(--fg);color:var(--bg);border-radius:24px;padding:clamp(32px,6vw,72px);display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:end}
+@media (max-width:860px){.contact-band{grid-template-columns:1fr}}
+.contact-band h2{color:var(--bg)}
+.contact-band h2 .dim{color:color-mix(in srgb,var(--bg) 55%,var(--fg))}
+.contact-band p{color:color-mix(in srgb,var(--bg) 70%,var(--fg));margin:18px 0 0;max-width:50ch}
+.reach{display:grid;gap:12px;min-width:0}
+.reach .line{display:flex;align-items:center;justify-content:space-between;gap:12px;border:1px solid color-mix(in srgb,var(--bg) 25%,var(--fg));border-radius:12px;padding:12px 14px;min-width:0}
+.reach .line .k{font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:color-mix(in srgb,var(--bg) 60%,var(--fg))}
+.reach .line .v{font-weight:600;overflow-wrap:anywhere;user-select:all}
+.reach .line a.v{text-decoration:none}
+.reach button{font:inherit;font-size:13px;font-weight:600;border:0;border-radius:999px;padding:7px 14px;background:var(--bg);color:var(--fg);cursor:pointer;flex-shrink:0}
+
+footer{border-top:1px solid var(--line);padding-block:28px;color:var(--muted);font-size:13.5px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer .m{font-family:var(--mono);font-size:12.5px}
+
+/* BLOG */
+.blog-latest{padding-block:96px;background:var(--surface);border-block:1px solid var(--line)}
+.blog-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap}
+.post-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}
+@media (max-width:980px){.post-grid{grid-template-columns:1fr}}
+.post-card{display:flex;flex-direction:column;gap:10px;min-width:0;text-decoration:none;border:1px solid var(--line);border-radius:var(--r);padding:24px;background:var(--bg);transition:border-color .15s ease,transform .15s ease}
+.post-card:hover{border-color:var(--accent);transform:translateY(-2px)}
+.post-date{font-family:var(--mono);font-size:12.5px;color:var(--accent);letter-spacing:.06em;font-variant-numeric:tabular-nums}
+.post-card h3{font-size:20px;font-weight:600;line-height:1.3}
+.post-card p{margin:0;color:var(--muted);font-size:15.5px}
+.post-card .more{margin-top:auto;font-size:14px;font-weight:600;color:var(--fg)}
+.post-empty{color:var(--muted);margin-top:32px;font-family:var(--mono);font-size:14px}
+.blog-page{padding-block:72px 104px}
+.blog-intro{max-width:62ch;color:var(--muted);font-size:18px;margin:18px 0 0}
+.post-list{margin-top:56px;display:grid;gap:0;border-top:1px solid var(--line)}
+.post{display:grid;grid-template-columns:170px minmax(0,1fr);gap:28px;padding-block:44px;border-bottom:1px solid var(--line);scroll-margin-top:90px}
+@media (max-width:760px){.post{grid-template-columns:1fr;gap:10px}}
+.post h2{font-size:clamp(32px,4vw,46px)}
+.post .body{display:grid;gap:16px;margin-top:20px;font-size:17.5px;max-width:68ch}
+.post .body p{margin:0}
+.post .src{margin-top:26px;padding-top:18px;border-top:1px dashed var(--line);max-width:68ch}
+.post .src h4{margin:0 0 10px;font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:500}
+.post .src ol{margin:0;padding-left:20px;display:grid;gap:6px;font-size:14.5px;color:var(--muted)}
+.post .src a{color:var(--fg);text-underline-offset:3px;overflow-wrap:anywhere}
+.post .src a:hover{color:var(--accent)}
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top"><span class="mono-mark">AS</span>Asim Siddique</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#expertise">Expertise</a></li>
+      <li><a href="#work">Selected work</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#credentials">Credentials</a></li>
+      <li><a href="/blog.html">Blog</a></li>
+    </ul>
+    <a class="btn btn-primary" href="#contact">Get in touch</a>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="status"><span><b>●</b> ONLINE</span><span>uptime: 30+ yrs</span><span>zLinux · middleware · compliance</span></div>
+        <p class="eyebrow">Security · Compliance · Enterprise infrastructure</p>
+        <h1>Keeping critical systems <em>secure</em>, stable and compliant.</h1>
+        <p class="sub">I'm Asim Siddique, a Senior System Programmer for Security &amp; Compliance at BlueCross BlueShield of South Carolina. For three decades I've been the person teams call when a mission-critical platform has to stay up and pass the audit.</p>
+        <div class="ctas">
+          <a class="btn btn-primary" href="#work">See selected work <span aria-hidden="true">↓</span></a>
+          <a class="btn btn-ghost" href="https://www.linkedin.com/in/asim-siddique-478a6a1" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <div class="portrait">
+        <div class="portrait-frame">
+          <div class="portrait-inner">
+            <img class="headshot" src="/headshot.webp" alt="Portrait of Asim Siddique" width="560" height="700">
+          </div>
+        </div>
+        <span class="portrait-tag">Columbia, South Carolina</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <div class="stats" aria-label="Career highlights">
+    <div class="wrap stats-grid">
+      <div class="stat"><div class="n">30+</div><div class="l">Years in enterprise IT</div></div>
+      <div class="stat"><div class="n">3,000+</div><div class="l">Users migrated to mainframe Linux</div></div>
+      <div class="stat"><div class="n">48h</div><div class="l">Disaster-recovery target, tested twice a year</div></div>
+      <div class="stat"><div class="n">10</div><div class="l">Engineers led across middleware and zLinux</div></div>
+      <div class="stat"><div class="n">2,000+</div><div class="l">Network nodes run across NYC offices</div></div>
+      <div class="stat"><div class="n">3</div><div class="l">Industries: healthcare, finance, telecom</div></div>
+    </div>
+  </div>
+
+  <!-- STORY -->
+  <section class="story" id="about">
+    <div class="wrap story-grid">
+      <div>
+        <p class="eyebrow">About</p>
+        <h2>The systems nobody notices <span class="dim">until they fail.</span></h2>
+        <div class="era">
+          <div><span>1996</span>Wide-area networks and 2,000+ node LANs in New York</div>
+          <div><span>1998</span>Bank infrastructure, QA and business continuity at BNY</div>
+          <div><span>2005</span>WebSphere and single sign-on for Ameriprise through IBM</div>
+          <div><span>2008</span>Mainframe Linux and middleware at BlueCross BlueShield SC</div>
+          <div><span>2019</span>Security, compliance and audit readiness</div>
+        </div>
+      </div>
+      <div class="story-lines">
+        <p>I've spent my career on the infrastructure that people only think about when it breaks.</p>
+        <p>Health-benefit portals for federal employees. Wealth platforms for families with millions invested. Mainframe environments carrying thousands of daily users.</p>
+        <p><strong>When something goes wrong in those places, it goes wrong for a lot of people at once.</strong></p>
+        <p>I've worked RED-alert incidents with CIOs on the line, run disaster-recovery exercises against a 48-hour clock, and took part in data-center recovery testing after 9/11.</p>
+        <p>What I learned is that reliability and security are the same discipline. A system that isn't compliant isn't stable, and a system that isn't stable can't be secured.</p>
+        <p>Today I put that into practice as a compliance and data-security analyst on the zLinux Services team. I assess systems against <strong>NIST and CIS</strong>, enforce least-privilege access, run vulnerability reviews and build the evidence that audits depend on.</p>
+        <p>I also mentor the next generation of engineers, because I've been there myself.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERTISE -->
+  <section class="expertise" id="expertise">
+    <div class="wrap">
+      <p class="eyebrow">Expertise</p>
+      <h2>Depth across the stack, <span class="dim">from the wire to the audit.</span></h2>
+      <div class="exp-grid">
+        <div class="exp"><span class="code">SEC/01</span><h3>Security &amp; compliance</h3>
+          <div class="chips"><span>NIST</span><span>CIS</span><span>DoD STIG</span><span>Least privilege</span><span>Vulnerability review</span><span>Incident response</span><span>Audit evidence</span></div></div>
+        <div class="exp"><span class="code">PLT/02</span><h3>Platforms</h3>
+          <div class="chips"><span>zLinux s390x</span><span>z/VM</span><span>SLES 9–12</span><span>AIX</span><span>Solaris</span><span>z9 / z10</span><span>HACMP</span></div></div>
+        <div class="exp"><span class="code">MID/03</span><h3>Middleware</h3>
+          <div class="chips"><span>WebSphere 5–9</span><span>WebSphere Portal</span><span>IBM HTTP Server</span><span>MQ / JMS</span><span>Managed File Transfer</span><span>WebLogic</span></div></div>
+        <div class="exp"><span class="code">DAT/04</span><h3>Data &amp; directory</h3>
+          <div class="chips"><span>DB2</span><span>Oracle 9–12</span><span>Sybase</span><span>MS-SQL</span><span>LDAP / TDS</span><span>RACF</span><span>SiteMinder</span></div></div>
+        <div class="exp"><span class="code">OPS/05</span><h3>Operations &amp; recovery</h3>
+          <div class="chips"><span>Tivoli Storage Manager</span><span>OMEGAMON</span><span>TWS scheduling</span><span>EMC SAN</span><span>Disaster recovery</span><span>24×7 on-call</span></div></div>
+        <div class="exp"><span class="code">NET/06</span><h3>Networking</h3>
+          <div class="chips"><span>Cisco routing</span><span>WAN design</span><span>OSPF / EIGRP</span><span>Checkpoint</span><span>Raptor firewall</span></div></div>
+        <div class="exp"><span class="code">LDR/07</span><h3>Leadership</h3>
+          <div class="chips"><span>Team lead</span><span>PMI project delivery</span><span>Mentoring</span><span>Executive comms</span><span>Change management</span></div></div>
+        <div class="exp"><span class="code">DEV/08</span><h3>Tools &amp; code</h3>
+          <div class="chips"><span>Shell scripting</span><span>GitHub</span><span>J2EE</span><span>Java / JS</span><span>C++</span><span>SSH / SSL</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section class="work" id="work">
+    <div class="wrap">
+      <div class="work-head">
+        <div>
+          <p class="eyebrow">Selected work</p>
+          <h2>Projects that <span class="dim">had to work the first time.</span></h2>
+        </div>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <div class="spec"><div class="row"><span>MIGRATION</span><span>BCBSSC</span></div><div class="big">x86 <i>→</i> s390x</div><div class="row"><span>SLES 9/10 on z/VM 5.4</span><span>z9 · z10</span></div></div>
+          <h3>Host On Demand to mainframe Linux</h3>
+          <p>Key technical lead for moving Host On Demand from Windows on Intel to zLinux, deploying more than 3,000 users and secure external web access.</p>
+          <div class="meta">2008–2012 · WebSphere · IHS · LDAP</div>
+        </article>
+        <article class="card">
+          <div class="spec"><div class="row"><span>DISASTER RECOVERY</span><span>2× / YEAR</span></div><div class="big">RTO <i>48</i>h</div><div class="row"><span>J2EE + web tiers</span><span>fepblue.org</span></div></div>
+          <h3>Federal Employee Program recovery</h3>
+          <p>Subject-matter expert for recovering the applications federal employees use to manage their health benefits, rehearsed twice a year with vendor and client.</p>
+          <div class="meta">2008–2012 · WAS ND · MQ · TSM</div>
+        </article>
+        <article class="card">
+          <div class="spec"><div class="row"><span>IDENTITY</span><span>IBM · AMERIPRISE</span></div><div class="big">Day <i>700</i></div><div class="row"><span>web · app · data tiers</span><span>SSO</span></div></div>
+          <h3>Ameriprise single sign-on</h3>
+          <p>Built multi-tier SSO for ameriprise.com during its separation from American Express, using SiteMinder and SunOne Directory with WebSphere failover and DB2.</p>
+          <div class="meta">2005–2008 · SiteMinder · WAS ND · DB2</div>
+        </article>
+        <article class="card">
+          <div class="spec"><div class="row"><span>COMPLIANCE</span><span>CURRENT</span></div><div class="big">NIST <i>·</i> CIS</div><div class="row"><span>assess · remediate · evidence</span><span>ITSO</span></div></div>
+          <h3>Security and compliance program</h3>
+          <p>Ongoing assessments, entitlement reviews, vulnerability cycles and audit evidence packages for internal and external regulatory reviews.</p>
+          <div class="meta">2019–present · zLinux Services</div>
+        </article>
+        <article class="card">
+          <div class="spec"><div class="row"><span>HARDENING</span><span>DoD</span></div><div class="big">STIG <i>✓</i></div><div class="row"><span>scan · analyze · fix</span><span>zLinux guests</span></div></div>
+          <h3>STIG remediation and EngageOne</h3>
+          <p>Led remediation of DoD STIG scan findings on zLinux guests, and was the primary system expert for the Pitney Bowes EngageOne rollout.</p>
+          <div class="meta">2008–2012 · RACF · TDS · Oracle 11</div>
+        </article>
+        <article class="card">
+          <div class="spec"><div class="row"><span>STORAGE</span><span>SHARP USA</span></div><div class="big">3590 <i>→</i> 3584</div><div class="row"><span>~2,000 tapes</span><span>30 GB → 200 GB</span></div></div>
+          <h3>Tape library upgrade</h3>
+          <p>Converted roughly 2,000 DLT tapes to LTO on a new IBM library with Tivoli Storage Manager, migrating data overnight without loss.</p>
+          <div class="meta">2005 · TSM v5 · AIX 5.1</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="experience" id="experience">
+    <div class="wrap">
+      <p class="eyebrow">Experience</p>
+      <h2>Thirty years, <span class="dim">one through-line.</span></h2>
+      <div class="tl">
+        <div class="role">
+          <div class="when">2019 — Present</div>
+          <div class="what">
+            <h3>Senior System Programmer, Security &amp; Compliance</h3>
+            <div class="org">BlueCross BlueShield of South Carolina</div>
+            <ul>
+              <li>Assess critical systems against NIST, CIS and internal security standards.</li>
+              <li>Monitor security events and audit trails; validate entitlements and enforce least privilege.</li>
+              <li>Lead vulnerability review cycles and build SOPs, risk reports and audit evidence.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="role">
+          <div class="when">2012 — 2019</div>
+          <div class="what">
+            <h3>Team Leader, Middleware Services &amp; zLinux</h3>
+            <div class="org">BlueCross BlueShield of South Carolina</div>
+            <ul>
+              <li>Led a team of ten across WebSphere, Portal, DB2, Oracle and security remediation.</li>
+              <li>Technology owner for Managed File Transfer; reviewed SQL and IIS roadmaps.</li>
+              <li>Lead point of contact for disaster-recovery staffing and the SLES 12 upgrade.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="role">
+          <div class="when">2008 — 2012</div>
+          <div class="what">
+            <h3>Senior Technical Support Analyst</h3>
+            <div class="org">BlueCross BlueShield of South Carolina · via Ettain Group</div>
+            <ul>
+              <li>Host On Demand migration to zLinux, FEP disaster recovery, EngageOne and STIG remediation.</li>
+              <li>Worked RED-alert incidents directly with CIOs and senior executives.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="role">
+          <div class="when">2005 — 2008</div>
+          <div class="what">
+            <h3>System Management Specialist</h3>
+            <div class="org">IBM Global Technology Services · Ameriprise &amp; Michelin accounts</div>
+            <ul>
+              <li>Ameriprise Day 700 separation and single sign-on; RiverSource advisor portal.</li>
+              <li>Multinational e-business apps for users across Europe and the Americas.</li>
+            </ul>
+          </div>
+        </div>
+        <details class="earlier">
+          <summary>Earlier career, 1996 — 2005</summary>
+          <div class="role">
+            <div class="when">2005</div>
+            <div class="what"><h3>Tivoli Storage Manager Consultant</h3><div class="org">Sharp Electronics USA · via CDI</div></div>
+          </div>
+          <div class="role">
+            <div class="when">1998 — 2005</div>
+            <div class="what"><h3>QA / Technical Support Analyst III</h3><div class="org">Bank of New York</div>
+              <ul><li>PrivateWealth portal, Security Master Database and anti-money-laundering systems; post-9/11 continuity testing.</li></ul></div>
+          </div>
+          <div class="role">
+            <div class="when">1996 — 1998</div>
+            <div class="what"><h3>Network Administrator</h3><div class="org">RSL COM USA</div>
+              <ul><li>Five-site Cisco WAN and 2,000+ node Novell LANs across New York offices.</li></ul></div>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREDENTIALS -->
+  <section class="creds" id="credentials">
+    <div class="wrap">
+      <p class="eyebrow">Credentials</p>
+      <h2>Education <span class="dim">&amp; certifications.</span></h2>
+      <div class="cred-grid">
+        <div>
+          <p class="sub-h">Education</p>
+          <ul class="cred-list">
+            <li><span class="t">MS, Information Systems<span class="s">Computer Forensics · Strayer University</span></span><span class="y">2016</span></li>
+            <li><span class="t">BBA, Computer Information Systems<span class="s">Baruch College, CUNY</span></span><span class="y">1995</span></li>
+          </ul>
+        </div>
+        <div>
+          <p class="sub-h">Certifications</p>
+          <div class="badges"><span>PMP</span><span>CCNP</span><span>CCNA</span></div>
+          <ul class="cred-list">
+            <li><span class="t">Project Management Professional<span class="s">Project Management Institute member</span></span><span class="y">2006</span></li>
+            <li><span class="t">Cisco Certified Network Professional</span><span class="y">2001</span></li>
+            <li><span class="t">Cisco Certified Network Associate</span><span class="y">1999</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOG -->
+  <section class="blog-latest" id="blog">
+    <div class="wrap">
+      <div class="blog-head">
+        <div>
+          <p class="eyebrow">From the blog</p>
+          <h2>AI agent adoption, <span class="dim">one day at a time.</span></h2>
+        </div>
+        <a class="btn btn-ghost" href="/blog.html">All posts <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="post-grid" id="latest-posts"><p class="post-empty">Loading the latest posts…</p></div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div class="contact-band">
+        <div>
+          <h2>Have a system that <span class="dim">has to stay up?</span></h2>
+          <p>I'm glad to talk about infrastructure security, compliance programs, mainframe Linux or mentoring. The best way to reach me is email or LinkedIn.</p>
+        </div>
+        <div class="reach">
+          <div class="line"><div><div class="k">Email</div><div class="v" id="email">asiddique@gmail.com</div></div><button type="button" id="copy-email">Copy</button></div>
+          <div class="line"><div><div class="k">LinkedIn</div><a class="v" href="https://www.linkedin.com/in/asim-siddique-478a6a1" target="_blank" rel="noopener">asim-siddique ↗</a></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap"><span>© 2026 Asim Siddique · Columbia, South Carolina</span><span class="m">status: all systems nominal</span></div>
+</footer>
+
+<script>
+document.getElementById('copy-email').addEventListener('click', function(){
+  var btn=this, txt=document.getElementById('email').textContent;
+  function done(){btn.textContent='Copied';setTimeout(function(){btn.textContent='Copy'},1600)}
+  try{
+    navigator.clipboard.writeText(txt).then(done,function(){selectIt()});
+  }catch(e){selectIt()}
+  function selectIt(){var r=document.createRange();r.selectNodeContents(document.getElementById('email'));var s=getSelection();s.removeAllRanges();s.addRange(r);btn.textContent='Selected';}
+});
+</script>
+
+<script src="/blog.js"></script>
+
+<script>
+(function(){
+  var grid=document.getElementById('latest-posts'); if(!grid||!window.__blog) return;
+  var B=window.__blog;
+  B.load(3).then(function(posts){
+    grid.textContent='';
+    if(!posts.length){grid.appendChild(B.el('p','post-empty','The first post is on its way.'));return;}
+    posts.slice(0,3).forEach(function(p){
+      var a=B.el('a','post-card'); a.href='/blog.html#'+encodeURIComponent(p.slug);
+      a.appendChild(B.el('span','post-date',B.fmt(p.date)));
+      a.appendChild(B.el('h3',null,p.title));
+      a.appendChild(B.el('p',null,p.summary||''));
+      a.appendChild(B.el('span','more','Read the post →'));
+      grid.appendChild(a);
+    });
+  }).catch(function(){grid.textContent='';grid.appendChild(B.el('p','post-empty','Posts could not be loaded right now.'));});
+})();
+</script>
+</body>
+</html>
