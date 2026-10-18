@@ -1,0 +1,23 @@
+{
+  "slug": "2026-10-18-agents-are-moving-faster-than-their-guardrails",
+  "date": "2026-10-18",
+  "title": "AI agents are moving faster than their guardrails",
+  "summary": "Most companies now run AI agents in production, and most plan to give them more autonomy. Gartner expects over 40% of agentic AI projects to be canceled by 2027, partly because of weak risk controls.",
+  "content": [
+    "AI agents are no longer a lab experiment. In G2's Enterprise AI Agents Report, 57% of companies said they already have agents in production, another 22% are piloting them, and 78% plan to give their agents more autonomy within the next year.",
+    "The way those agents are supervised is changing just as fast. Nearly half of buyers (47%) run agents with autonomy inside guardrails, and 34% already let agents act first and have humans review afterward. Agents are auto-blocking suspicious IP addresses and rolling back failed deployments in more than half of the operational workflows G2 looked at.",
+    "That speed has a cost. Gartner predicts that more than 40% of agentic AI projects will be canceled by the end of 2027. It names three reasons: rising costs, unclear business value and inadequate risk controls. Gartner also warns about \"agent washing\". It estimates that only about 130 of the thousands of vendors marketing agentic AI offer real autonomous capability.",
+    "From a security and compliance seat, the third reason is the one to plan for now. An agent that can block an IP or roll back a release is a privileged identity. It needs the same things we demand of any service account: least-privilege access, a named owner, logged actions that an auditor can trace, and a tested way to pull its permissions in an incident.",
+    "The teams that keep their agent programs alive past 2027 will be the ones that treat governance as part of the build, not a review at the end. Start by inventorying every agent with write access to production, map each one to an owner and a permission set, and make sure its actions land in the same audit trail as everything else."
+  ],
+  "sources": [
+    {
+      "title": "G2 — Enterprise AI Agents Report: Industry Outlook for 2026",
+      "url": "https://learn.g2.com/enterprise-ai-agents-report"
+    },
+    {
+      "title": "PPC Land — Nearly half of agentic AI projects may fail by 2027, warns research firm (Gartner prediction, June 2025)",
+      "url": "https://ppc.land/nearly-half-of-agentic-ai-projects-may-fail-by-2027-warns-research-firm/"
+    }
+  ]
+}
