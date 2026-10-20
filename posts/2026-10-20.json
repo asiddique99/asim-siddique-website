@@ -1,0 +1,24 @@
+{
+  "slug": "2026-10-20-nist-feedback-says-build-agent-identity-on-existing-standards",
+  "date": "2026-10-20",
+  "title": "NIST feedback says build agent identity on standards we already run",
+  "summary": "NIST's NCCoE published its summary of 614 comments on AI agent identity and authorization. Most respondents want to extend existing identity standards, not invent a new stack, and the first test case will be agents in the software development lifecycle.",
+  "content": [
+    "At the end of September, NIST's National Cybersecurity Center of Excellence published a summary of the public comments on its concept paper about identity and authorization for software and AI agents. The paper, released in February, drew 614 responses. About 70 percent came from industry and the private sector and about 20 percent from independent or individual respondents. NIST called it an exceptional level of engagement.",
+    "The main finding is practical. Most commenters favored an evolutionary approach that extends existing identity standards rather than building a new agent-specific stack. They warned that throwing out mature identity infrastructure would create adoption barriers and new security risks. The standards they pointed to are familiar to anyone in identity work: OAuth 2.0 and token exchange, SPIFFE and SPIRE for workload identity, mutual TLS and DPoP to bind tokens to the caller, and policy engines such as OPA, Cedar and NGAC. MCP and A2A were described as implementation protocols, not complete identity standards.",
+    "Several points in the summary read like a least-privilege checklist. Agents need distinct, verifiable non-human identities. Credentials should be short-lived, expire when a subtask ends, narrow in scope as work is delegated down a chain, and be revocable without breaking other workflows. Authorization should be checked at the moment of action, on each tool call, not only at login. There was strong opposition to letting an LLM be the main authorization decision-maker because of prompt injection risk. The consensus favored deterministic policy enforcement, with anomaly signals added as context.",
+    "The audit section is the one I would hand to any compliance team. Commenters noted that traditional logs record what happened but not why, under what authority, or what information influenced the decision. Proposed fixes include recording delegation chains, policy decisions and intent, plus tamper-evident logging. On human oversight, they warned about consent fatigue: asking for approval on every action leads people to approve blindly. Their recommendation is to reserve human approval for high-impact actions and make it a hard stop.",
+    "NIST's next step is an enterprise use case, an agentic software factory built with its DevSecOps project, followed by a consumer use case. A webinar on the project is scheduled for October 28. There is no fixed comment deadline, so feedback is accepted on a rolling basis.",
+    "From a security and compliance point of view, the takeaway is reassuring. You do not need to wait for a new standard to start. Give each agent its own identity, keep its credentials short-lived and scoped to the task, enforce policy outside the model, and make sure your logs can show who authorized an action and why. Those are controls most of us already know how to audit."
+  ],
+  "sources": [
+    {
+      "title": "NIST - Comments on Software and Agentic AI Identity Concept Paper",
+      "url": "https://www.nist.gov/news-events/news/2026/09/comments-software-and-agentic-ai-identity-concept-paper"
+    },
+    {
+      "title": "NIST NCCoE - Summary of comments: Software and AI agent identity and authorization",
+      "url": "https://pages.nist.gov/nccoe-ai-identity/summary-of-comments.html"
+    }
+  ]
+}
