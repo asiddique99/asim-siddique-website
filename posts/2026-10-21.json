@@ -1,0 +1,32 @@
+{
+  "slug": "2026-10-21-vendors-move-agent-controls-into-the-runtime",
+  "date": "2026-10-21",
+  "title": "Vendors are moving AI agent controls into the runtime",
+  "summary": "In one week, NVIDIA, Microsoft and ServiceNow each announced ways to contain, re-scope or stop AI agents while they run. Gartner now lists agent identity and agent harnesses as top trends for 2027. Here is why runtime control matters.",
+  "content": [
+    "For most of the past year, AI agent governance meant policies on paper and permissions granted at setup. This week the big platforms made a different bet. NVIDIA, Microsoft and ServiceNow each announced controls that act on an agent while it is running, not just before it starts.",
+    "On October 21 at GTC Berlin, NVIDIA released a reference architecture built on OpenShell, its open source secure runtime for agents. It pairs OpenShell with NVIDIA Sentry, a framework that runs on BlueField-4 DPUs and monitors agent behavior out of band, outside the agent's own process. NVIDIA says an agent that tries to leave its software boundary is quarantined within milliseconds. Security vendors including CrowdStrike, Okta, Palo Alto Networks, Zscaler and Microsoft are integrating OpenShell, and BBVA and Santander are exploring it.",
+    "Two days earlier, Microsoft told customers to treat agents as insiders rather than trusted software. Its new Dynamic Permissions start an agent with no permissions or the bare minimum, grant access per task, and shrink it when the task ends. Dynamic Agent Risk keeps a running risk score for each agent, and Dynamic Conditional Access can cut an agent to read-only, limit its network access, require human approval, or halt it. ServiceNow's AI Passport, announced October 15 and due in Q4 2026, gives each agent a signed credential it checks at runtime, with revocation, scoped delegation and audit trails. ServiceNow says it will carry those policies into OpenShell and Sentry.",
+    "Gartner's 2027 strategic technology trends, published October 20, point the same way. Two of the ten are AI agent identity and an agent coding harness that governs autonomous developer behavior. Gartner predicts that by 2028, 25% of enterprise security breaches will trace back to AI agent abuse, due to unmanaged machine privileges and legacy credential practices.",
+    "From where I sit in security and compliance, the shift is overdue. Least privilege has always been a runtime discipline. We do not hand a service account standing root and hope it behaves. Agents choose their own next step, so a permission set fixed at deployment will be too broad for most of what they do. Per-task access, a kill switch that works in seconds, and monitoring the agent cannot tamper with are the same controls we expect for privileged human access.",
+    "My practical advice: before buying any of these platforms, inventory your agents and the credentials they hold, decide which actions need human approval, and test that you can revoke an agent's access and confirm it stopped. If you cannot show an auditor that stop button working today, runtime tooling will not fix the gap by itself."
+  ],
+  "sources": [
+    {
+      "title": "GlobeNewswire - NVIDIA Launches OpenShell Reference Architecture for Safe AI Agents",
+      "url": "https://www.globenewswire.com/news-release/2026/10/21/3385311/0/en/nvidia-launches-openshell-reference-architecture-for-safe-ai-agents.html"
+    },
+    {
+      "title": "SecurityWeek - Microsoft Targets Rogue AI Agents With Dynamic Permissions, Risk Scoring",
+      "url": "https://securityweek.com/microsoft-targets-rogue-ai-agents-with-dynamic-permissions-risk-scoring"
+    },
+    {
+      "title": "ServiceNow Newsroom - ServiceNow advances its operational harness for enterprise AI with AI Passport and expanded governance capabilities",
+      "url": "https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-advances-its-operational-harness-for-enterprise-AI-with-AI-Passport-and-expanded-governance-capabilities/default.aspx"
+    },
+    {
+      "title": "Gartner - Gartner Identifies the Top Strategic Technology Trends for 2027",
+      "url": "https://www.gartner.com/en/newsroom/press-releases/2026-10-20-gartner-identifies-the-top-strategic-technology-trends-for-2027"
+    }
+  ]
+}
