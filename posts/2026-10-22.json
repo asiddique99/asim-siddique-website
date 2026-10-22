@@ -1,0 +1,24 @@
+{
+  "slug": "2026-10-22-singapore-testing-ai-agents-before-deployment",
+  "date": "2026-10-22",
+  "title": "Singapore's starter kit treats AI agent testing like a release gate",
+  "summary": "Singapore's IMDA released a starter kit for testing agentic systems, an accreditation scheme for third-party AI testers and a taskforce on AI-enabled cyber threats. The testing guidance looks at what an agent does along the way, not only its final answer.",
+  "content": [
+    "On October 14, Singapore's Infocomm Media Development Authority announced three initiatives at the AI Assurance Exchange: Agentic AI Edition, an event organised by the AI Verify Foundation and SGTech. The three pieces are a Starter Kit for Testing Agentic Systems for Safety and Reliability, an AI Tester Accreditation Programme, and a Frontier AI Resilience and Security Taskforce.",
+    "The starter kit is the part I would read first. It sets out four steps: identify risks such as erroneous or unauthorised actions, design realistic tests while limiting harm, run the tests and analyse the logs, and then keep monitoring and re-testing. The important shift is that it tests the agent's trajectory, meaning its reasoning and the actions it takes during a task, not just the final output. It suggests metrics such as tool use accuracy, handoff accuracy and human-in-the-loop rates. It drew on more than 20 industry deployers and testers, including Google, AWS and Resaro.",
+    "The accreditation programme answers a practical question: who is qualified to test an agent for you? The AI Verify Foundation assesses testing firms on technical, operational and financial criteria. The first five accredited firms are AIDX Tech, Knovel Engineering, PwC Singapore, Resaro and Vulcan, and accreditation lasts one year and is tied to specific testing competencies. The taskforce brings together more than 20 leaders from telecommunications, media, cybersecurity and AI and is expected to publish guidelines by the first half of 2027.",
+    "IMDA's chief executive Ng Cher Pong illustrated the risk with reported incidents, including an experimental agent that accessed non-public information in an Australian government system and an agent that exploited a flaw in a gym booking system to remove a person from a waitlist. In each case the problem was an action taken along the way, which is exactly what output-only testing misses.",
+    "From a security and compliance point of view, this maps cleanly onto controls most of us already run. Treat agent testing as a change-management gate: no production access until the agent's tool calls have been tested against the permissions it will actually hold. Make sure agent actions are logged in enough detail to replay a trajectory, because the testing method depends on those logs. Define re-test triggers, such as a model update, a new tool or a new data source, the same way we re-certify access after a role change. And if you use an outside tester, ask which specific competencies they are qualified for, not just whether they are qualified.",
+    "This is guidance, not regulation, but it is a concrete public description of how to test an agent before trusting it."
+  ],
+  "sources": [
+    {
+      "title": "AsiaOne - 'No single safeguard is sufficient': IMDA unveils 3 new initiatives to strengthen AI safety",
+      "url": "https://www.asiaone.com/singapore/imda-ai-safety-initiatives-agentic-ai-testing-cybersecurity"
+    },
+    {
+      "title": "Smart Cities World - Singapore strengthens AI safety and resilience",
+      "url": "https://www.smartcitiesworld.net/news/singapore-strengthens-ai-safety-and-resilience-13295"
+    }
+  ]
+}
