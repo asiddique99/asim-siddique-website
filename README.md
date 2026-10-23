@@ -23,8 +23,12 @@ It is a static site with no build step. Every page is plain HTML, CSS and JavaSc
 
 ## Daily publishing
 
-1. **10:50 a.m. Eastern:** a scheduled Claude task researches AI agent adoption, writes a post and deploys it straight to Vercel, so it is live by about 11 a.m.
-2. **11:15 a.m. Eastern:** the GitHub Actions workflow `.github/workflows/sync-posts.yml` runs `scripts/sync_posts.py`. The script copies any new posts from the live site into `posts/`, and the workflow commits them here. You can also run it by hand from the Actions tab ("Publish daily post to GitHub" → "Run workflow").
+The Vercel project is linked to this repository: every push to `main` deploys to production.
+
+1. **10:50 a.m. Eastern:** a scheduled Claude task researches AI agent adoption, writes a post and commits `posts/YYYY-MM-DD.json` and `posts/index.json` here. The push deploys the site, so the post is live by about 11 a.m. The same task then shares it on LinkedIn.
+2. **11:15 a.m. Eastern:** the GitHub Actions workflow `.github/workflows/sync-posts.yml` runs `scripts/sync_posts.py` as a safety net. If a post reached the live site without being committed here, the workflow copies it into `posts/` and commits it. You can also run it by hand from the Actions tab ("Publish daily post to GitHub" → "Run workflow").
+
+`.vercelignore` keeps this README, `scripts/` and `.github/` out of the deployed site.
 
 ## Running locally
 
