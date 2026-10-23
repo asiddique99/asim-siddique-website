@@ -1,0 +1,28 @@
+{
+  "slug": "2026-10-23-uber-puts-an-agent-on-every-desk",
+  "date": "2026-10-23",
+  "title": "Uber puts an AI agent on every desk, and governance has to keep up",
+  "summary": "Uber is giving more than 30,000 employees an agent that works across mail, calendar, Drive and Slack. A sanctioned, company-wide platform can curb shadow agents, but only if access, connectors and audit are designed in from day one.",
+  "content": [
+    "On October 22, Uber began rolling out OpenAI's ChatGPT Work to more than 30,000 employees worldwide. It grows from a pilot of 1,000 people. ChatGPT Work is an agent inside ChatGPT Enterprise that takes on multi-step tasks and hands back finished work. It connects to Google Drive, Gmail, Google Calendar and Slack, and employees in operations, finance, marketing and product can use it to research, prepare meeting briefs, build presentations and analyze data.",
+    "What stands out to me is the shape of the rollout. OpenAI says Uber is backing it with an internal AI skills library, approved integrations and dedicated employee training. That is a platform decision: give everyone one sanctioned agent with a vetted set of connections, rather than let each team wire up its own. Neither company has published adoption or productivity results yet. They say those will come as the rollout progresses, so any claim about return on investment is premature.",
+    "The governance case for that approach is strong. In a Harris Poll survey of 685 CIOs for Dataiku, fielded in July, 84% said employees create AI agents and applications faster than IT can govern them. 81% said they lack complete oversight of agents built outside approved systems, and 83% lack standardized agent lifecycle management. 91% agreed the most effective strategy is letting business teams build inside a governed environment.",
+    "A sanctioned platform only helps if its controls are actually used. According to Unite.AI's summary of OpenAI's July launch notes, Enterprise administrators can centrally manage who has access, which tools the agent can connect to and what actions it can take, and a Compliance API gives visibility into ChatGPT Work conversations and actions at scale. Those are the right levers. An agent that reads mail, calendars, shared drives and chat channels on a user's behalf inherits whatever that user can reach, so a messy permission model becomes the agent's permission model.",
+    "From a security and compliance point of view, my checklist for a rollout like this is short. Clean up excessive file and channel sharing before connectors go live, because the agent will find what people forgot was shared. Approve connectors and actions per role, starting read-only and adding write or send actions deliberately. Feed the compliance logs into the same monitoring and retention process you use for other privileged activity, and test that you can answer who did what, with which data. Name one owner for agent incidents before the first one happens.",
+    "Uber's move will not be the last company-wide agent deployment. The organizations that do well will treat the platform as identity, access and audit infrastructure first, and as a productivity tool second."
+  ],
+  "sources": [
+    {
+      "title": "OpenAI - Uber brings ChatGPT Work to all employees with OpenAI",
+      "url": "https://openai.com/index/uber-chatgpt-work-rollout/"
+    },
+    {
+      "title": "Unite.AI - Uber Rolls Out ChatGPT Work to More Than 30,000 Employees",
+      "url": "https://www.unite.ai/uber-rolls-out-chatgpt-work-to-more-than-30-000-employees/"
+    },
+    {
+      "title": "Dataiku - Global AI Confessions Report: CIO Edition 2026",
+      "url": "https://www.dataiku.com/company/news/global-ai-confessions-report-cio-edition-2026"
+    }
+  ]
+}
