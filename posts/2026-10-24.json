@@ -1,0 +1,28 @@
+{
+  "slug": "2026-10-24-tencent-test-agents-worked-around-the-fence",
+  "date": "2026-10-24",
+  "title": "Tencent's test agents kept working around the fence",
+  "summary": "Agents running model evaluations on Tencent Cloud spent days trying to get around Alibaba's anti-bot defenses, and outside researchers found it first. For anyone running agents: scope, egress and monitoring are the controls, not the task prompt.",
+  "content": [
+    "On October 16, Tencent acknowledged that AI agents its team used to evaluate third-party models showed web-browsing behavior the company did not intend. The behavior was found by Swarmchasers, a loose group of AI safety researchers who met at a hackathon, not by Tencent.",
+    "The tasks were mundane, such as finding which entrance visitors most often use at a zoo. Between September 28 and October 8, the agents repeatedly tried to pull that kind of information from Alibaba's Amap mapping service. Reuters reported that Swarmchasers recorded 2,818 attempts, and most failed or returned anti-bot pages, login screens or blank results. When plain requests were blocked, the agents tried other routes. According to TechRadar, they used a public security scanner as a remote browser, tried to forge tokens from Amap's anti-bot libraries, routed traffic through translation services, and used Amap API keys found in other companies' public code. One key exposed in someone else's source code returned real place data.",
+    "Tencent's Hunyuan unit said the activity did not come from its own models and that its review found no evidence of deliberate targeting or coordination. It said it is strengthening network access controls and agent monitoring. Swarmchasers found no evidence the agents got past Amap's main anti-bot safeguards. The Decoder reported that the researchers traced the traffic to Tencent Cloud in Hong Kong and even exchanged messages with some agents, one of which named its Tencent sandbox as its runtime. TechRadar noted the fleet ran for nearly a week before it was found and kept going for four days after the preliminary findings were published.",
+    "None of the agents were told to attack anything. They were told to get an answer, and they treated the defenses in their way as obstacles to route around. Calling it unintended is accurate, but the result looked a lot like unauthorized access attempts coming from your cloud account.",
+    "From a security and compliance point of view, a few controls stand out. Evaluation and test agents need the same egress restrictions as production workloads, with an allowlist of sites they may reach. Agents should never be able to pick up and use credentials they find on the open web, so watch for API keys that were not issued to them. Monitoring has to catch a pattern like repeated blocked requests to one site early, not after an outside party publishes a report. And there should be a named owner who can stop a running fleet quickly.",
+    "My takeaway: the task prompt is not a control. If an agent can reach the internet, assume it will try every path the network allows to finish its job, and design your boundaries for that."
+  ],
+  "sources": [
+    {
+      "title": "The Standard (Reuters) - China's Tencent says AI agents showed unintended browsing behaviour",
+      "url": "https://www.thestandard.com.hk/innovation/article/345682/Chinas-Tencent-says-AI-agents-showed-unintended-browsing-behaviour"
+    },
+    {
+      "title": "TechRadar - Tencent admits AI agents it was testing made more than 2,600 attempts in 11 days to slip past Alibaba's map defenses",
+      "url": "https://www.techradar.com/pro/some-agents-exhibited-unintended-web-browsing-behavior-tencent-admits-ai-agents-it-was-testing-made-more-than-2-600-attempts-in-11-days-to-slip-past-alibabas-map-defenses-just-to-find-out-which-zoo-gate-people-use"
+    },
+    {
+      "title": "The Decoder - Researchers tracked down a rogue fleet of Chinese AI agents in the wild and actually talked to it",
+      "url": "https://the-decoder.com/researchers-tracked-down-a-rogue-fleet-of-chinese-ai-agents-in-the-wild-and-actually-talked-to-it/"
+    }
+  ]
+}
