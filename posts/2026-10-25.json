@@ -1,0 +1,32 @@
+{
+  "slug": "2026-10-25-banks-shut-the-door-on-credential-sharing-ai-agents",
+  "date": "2026-10-25",
+  "title": "Banks shut the door on AI agents that borrow customer passwords",
+  "summary": "JPMorgan, Citi and Wells Fargo are blocking outside AI agents that log in with customer credentials, while regulators ask banks whether they can audit and stop their own agents. The common thread is delegated, scoped authority.",
+  "content": [
+    "In the past two weeks several of the largest US banks drew a clear line on AI agents. On its October 13 earnings call, JPMorgan Chase CEO Jamie Dimon said the bank will not let outside agents in because it is \"just too risky for clients and for JPMorgan.\" A spokeswoman added that the bank does not allow third parties to log in to accounts using customers' banking credentials. Outside agents can still see some account data in read-only form, but they cannot send money or pay bills.",
+    "Citi told the Daily Caller News Foundation that it does not allow third-party AI agents to log into a customer's account or transact on its digital banking platforms, though customers can still grant limited read-only access through approved open banking providers. Wells Fargo said it has taken steps to block unauthorized agents. An industry source said the immediate worry is customers handing their banking credentials to AI tools, not agents breaking in on their own.",
+    "I read this as an identity problem more than an AI problem. When a customer gives an agent their password, the bank sees one user. It cannot tell the person from the software, cannot limit what the software does, and cannot revoke the software without resetting the person. That is a shared account, and access control frameworks treat shared credentials as a finding.",
+    "The more useful news is what is being built in its place. American Express described an Intent Intelligence Framework at TechCrunch Disrupt on October 13. The customer's instructions and limits, such as merchant and maximum budget, are recorded and approved up front. The system issues a Proof of Intent Token, and the agent pays with a derived credential instead of the real card number. Amex says the record of what was authorized, which agent acted and when can support fraud prevention and disputes.",
+    "Regulators are asking the same questions from the inside. ComplexDiscovery, summarizing Reuters reporting, says the Federal Reserve, OCC and FDIC are asking banks whether they can track and audit decisions made by autonomous agents and how they would shut them down. In a Wolters Kluwer survey of 230 US banking professionals, 34% named kill-switch protocols as the incident response area where they are least prepared.",
+    "My takeaways for any regulated shop. Do not let agents ride on human credentials; give each agent its own identity with scopes you can see and revoke. Start with read-only and add write actions one at a time, with limits recorded before the action happens. Keep a log that ties every action to the agent, the person who delegated it and the approved intent. And test the shutdown procedure the way you test disaster recovery, before you need it."
+  ],
+  "sources": [
+    {
+      "title": "Cybernews - JPMorgan blocks outside AI agents from customer accounts",
+      "url": "https://cybernews.com/security/jpmorgan-chase-blocks-outside-ai-agents/"
+    },
+    {
+      "title": "Daily Caller - AI agents pose new security headache for America's biggest banks",
+      "url": "https://dailycaller.com/2026/10/23/citi-wells-fargo-crack-down-on-ai-agents-accessing-bank-accounts"
+    },
+    {
+      "title": "TechCrunch - Amex introduces a framework to prevent AI agents from making unauthorized purchases",
+      "url": "https://techcrunch.com/?p=3175284"
+    },
+    {
+      "title": "ComplexDiscovery - US bank regulators ask whether lenders can stop their AI agents",
+      "url": "https://complexdiscovery.com/us-bank-regulators-ask-whether-lenders-can-stop-their-ai-agents/"
+    }
+  ]
+}
