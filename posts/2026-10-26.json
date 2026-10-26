@@ -1,0 +1,24 @@
+{
+  "slug": "2026-10-26-federal-agencies-find-workflows-not-models-limit-ai-agents",
+  "date": "2026-10-26",
+  "title": "Federal agencies find workflows, not models, limit their AI agents",
+  "summary": "An ICF and MeriTalk survey of 100 federal IT leaders finds 45% already run agentic AI in production, but 91% say redesigning workflows is the biggest obstacle. Only about a third have defined human review, decision authority or staff training.",
+  "content": [
+    "On October 19, ICF and MeriTalk released The Agentic Future, a survey of 100 federal IT decision makers across civilian, defense and national security agencies. The headline is that adoption is further along than many people assume. 45% said their agencies use agentic AI in at least one production or operational workflow, and another 34% are exploring or piloting it. Only 10%, though, said the technology is operationally relevant across their whole organization today.",
+    "The most striking number is about what is holding them back. 91% named redesigning workflows as the biggest obstacle to scaling agentic AI. ICF frames this as an operational barrier rather than a technical one. What is not ready yet is the process around the agents: who hands off to whom, where a person has to look at the output, and what happens when something goes wrong.",
+    "The governance foundations explain why. Only 35% have defined human-in-the-loop review processes for agentic AI, 34% have clarified decision authority, and 33% have trained staff to work with AI agents. CDO Magazine's coverage adds a point I think matters a lot: permissions designed for employees or conventional applications may not define the right boundaries for agents that operate across multiple systems. When the agent's scope is borrowed from a human role, nobody has really decided what the agent itself should be allowed to do.",
+    "The respondents seem to know this. Asked what safeguards they need before AI agents coordinate work across multiple systems, 51% pointed to agent-specific identity and access controls, 42% to incident response processes, and 42% to human approval thresholds based on risk, cost or public impact. The early wins are in areas close to my own work: agencies reported measurable benefits in software development (62%), data validation (57%), compliance (56%) and cybersecurity (56%). 85% expect agentic AI to become critical or very important to their mission within three years.",
+    "From a security and compliance point of view, I read this survey as a to-do list that most regulated organizations, not just agencies, can start on now. Give each agent its own identity instead of a shared service account or a person's credentials, and scope it to the specific workflow. Write down, per workflow, which actions an agent may take alone and which need a named approver, and tie that threshold to risk or dollar impact. Add agent failures to your incident response runbooks before the first one happens. And log agent actions in a way an auditor can trace back to a decision owner.",
+    "The lesson I take away is that the agent is the easy part. The real work is redesigning the process the agent sits in, and that belongs to operations, security and compliance teams as much as to whoever picks the model."
+  ],
+  "sources": [
+    {
+      "title": "ICF - Vast Majority of Federal IT Leaders Say Outdated Workflows are the Biggest Challenge to Scaling Agentic AI",
+      "url": "https://www.icf.com/news/2026/10/report-challenge-federal-ai-adoption-operational"
+    },
+    {
+      "title": "CDO Magazine - Federal Agencies Adopt Agentic AI as Governance Gaps Persist",
+      "url": "https://www.cdomagazine.tech/us-federal-news-bureau/federal-agencies-adopt-agentic-ai-as-governance-gaps-persist"
+    }
+  ]
+}
