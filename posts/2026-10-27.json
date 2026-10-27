@@ -1,0 +1,24 @@
+{
+  "slug": "2026-10-27-agents-get-their-permissions-pulled-after-go-live",
+  "date": "2026-10-27",
+  "title": "Most firms have already pulled permissions from a live AI agent",
+  "summary": "Two new surveys of security and audit leaders show agents getting more authority than anyone scoped for. 78% of CISOs say they have pulled permissions from an agent in production, and only 9% of GRC leaders have redesigned workflows for agents.",
+  "content": [
+    "Two surveys released this month point at the same gap in AI agent adoption: agents are getting real authority in production before anyone has worked out how much they should have. The fix is happening after go-live, when access gets pulled back, rather than before.",
+    "The first comes from Agen.co by Frontegg, which sells agent governance tooling, so read it with that in mind. Cint surveyed 300 CISOs and CSOs at U.S. companies with 500 or more employees in late September. 78% said their organization has pulled permissions from an AI agent already running in production, and 49% have found an agent with access it should never have had. Only 37% scope an agent's access to the task it was built for, and only 18% verify an agent's identity before it acts.",
+    "The credential findings are the part I would put in front of an audit committee. 53% run agents on shared or long-lived keys, and those companies reported a 60% incident rate against 46% for those that do not. 40% see agents running on an employee's personal credentials. Of the 54% who reported a confirmed or suspected incident, 61% learned about it after the fact.",
+    "The second survey, from Optro, asked 417 governance, risk, compliance and audit leaders in North America and Europe about agents in their workflows. 38% have authorized agents to approve or reject transactions, 34% to modify controls or policies, and 27% to change user permissions or access rights. Meanwhile 34% have acted on an inaccurate agent decision, 30% have seen an agent take an unintended action, and 25% have had a control failure involving an agent. 96% agree workflows should adapt to AI, but only 9% have redesigned them to accommodate agents safely.",
+    "Put those side by side and the pattern is clear. An agent allowed to change access rights is itself a privileged identity, and in many shops it is not being managed like one. Frontegg's numbers also show an ownership split: security is held accountable for agent incidents at 48% of companies but owns the agents at only 23%.",
+    "From a compliance point of view, my takeaways are simple. Give every agent its own identity and short-lived credentials, never a person's login or a shared key. Scope access to the task and review it on the same cycle as other privileged accounts. Treat any agent that can approve transactions, change controls or grant access as a control in its own right, with logging an auditor can follow. And decide who owns each agent before it ships, not after the first permission has to be pulled."
+  ],
+  "sources": [
+    {
+      "title": "PR Newswire - 78% of Enterprises Have Pulled Permissions From an AI Agent Already in Production",
+      "url": "https://prnewswire.com/news-releases/78-of-enterprises-have-pulled-permissions-from-an-ai-agent-already-in-production-302920128.html"
+    },
+    {
+      "title": "Optro - One in Three Organizations Say They Have Acted on Wrong Decisions Made by AI Agents",
+      "url": "https://optro.ai/blog/one-in-three-organizations-say-they-have-acted-on-wrong-decisions-made-by-ai-agents-optro-research-finds"
+    }
+  ]
+}
