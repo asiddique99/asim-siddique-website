@@ -1,0 +1,24 @@
+{
+  "slug": "2026-10-28-sk-telecom-gives-ai-agents-employee-ids",
+  "date": "2026-10-28",
+  "title": "SK Telecom gives its AI agents employee IDs and a manager",
+  "summary": "SK Telecom's first AI Governance Report registers internal AI agents like staff: an ID, an accountable supervisor, scoped access, monitoring and a path to retirement. It reads like an identity lifecycle program for agents.",
+  "content": [
+    "On October 26, SK Telecom published its first AI Governance Report. What caught my attention is the plan to give the AI agents employees build and use at work something close to an employee ID, and to manage them with the same questions we ask about any account: who owns it, what can it touch, what is it doing, and when does it go away.",
+    "According to Financial News, an agent's basic information is registered after it is developed, and a separate review decides whether it meets internal standards for an ID. Each agent with an ID is then tracked by its assigned tasks, responsible person, affiliation, operating status and performance. Accountability scales with risk. An agent that helps one person with their own work can be managed by that user, while agents with greater impact or autonomy must be supervised by a team leader or executive. Permitted functions and data access are set by the nature of the work, and the more autonomous the agent, the stricter the human review and approval.",
+    "Monitoring runs through an internal Agent OS that records execution status, usage, change history, and the models and tools each agent uses, so problems can be traced to a cause. Execution can be halted when something goes wrong, and those actions are logged. Seoul Economic Daily reports that management will also look at token usage and work records, and that agents judged less necessary will be suspended or retired. The company is considering tying agent results to organizational KPIs over the longer term.",
+    "The rollout is staged. In 2026 SK Telecom is setting standards for review, registration, owner designation, permissions and data access scope. In 2027 it plans differentiated permissions based on autonomy and impact, and in 2028 a system covering operation through decommissioning. It also extended its ISO/IEC 42001 certification this month to cover the in-house agent management system.",
+    "From a security and compliance seat, this maps cleanly onto controls most of us already run for people and service accounts. Registration is the joiner step. Scoped access tied to the work is least privilege. A named, senior owner for high-impact agents gives an auditor someone to ask. Change history and a kill switch support incident response. Retirement is the leaver step, and it is the one most often skipped for non-human accounts.",
+    "My practical takeaway: before arguing about which agent platform to buy, check whether your identity governance process can answer five questions for every agent in production. Who approved it, who owns it, what can it access, where are its logs, and what would trigger shutting it off. If any answer is blank, that is the first gap to close."
+  ],
+  "sources": [
+    {
+      "title": "Financial News - SKT to assign employee IDs to AI agents and manage their permissions and responsibilities",
+      "url": "https://en.fnnews.com/news/202610260926194076"
+    },
+    {
+      "title": "Seoul Economic Daily - SK Telecom issues first AI Governance Report",
+      "url": "https://en.sedaily.com/technology/2026/10/26/sk-telecom-issues-first-ai-governance-report"
+    }
+  ]
+}
