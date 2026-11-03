@@ -1,0 +1,24 @@
+{
+  "slug": "2026-11-03-hong-kong-sfc-ties-agent-autonomy-to-risk",
+  "date": "2026-11-03",
+  "title": "Hong Kong's securities regulator ties AI agent autonomy to risk",
+  "summary": "Hong Kong's SFC says more than half of large financial groups it surveyed use or pilot agentic AI, and it plans principles-based guidance that keeps human accountability in place. Its message: grant autonomy in steps, starting with reversible work.",
+  "content": [
+    "Regulators are starting to say out loud what many practitioners already suspect: you cannot have a person approve every step an AI agent takes. At Hong Kong FinTech Week on November 2, Julia Leung, chief executive of the Securities and Futures Commission, said that human review of every intermediate step is unrealistic. The SFC's answer is not to drop oversight but to change where it sits.",
+    "The numbers behind her remarks come from the SFC's Large Firm AI Readiness Survey. It covered 20 large financial groups that together account for about 75% of securities turnover reported by licensed corporations. All of them already use AI in research, analytics and back-office work. For agentic AI, more than half are using or piloting it, and 80% expect further adoption in the next 12 months. The Standard, reporting from the event, put the split at 30% already using agentic AI in operations and 25% piloting it, based on a survey run in July and August.",
+    "Leung said agentic AI changes both the nature and the scale of risk. Agents can compound errors across multiple steps, take unauthorised actions and disrupt other firms in ways nobody intended. The SFC plans additional guidance that is practical and principles-based, aimed at applications with greater autonomy, with the focus on keeping human accountability and oversight throughout the workflow. It is also planning a cybersecurity framework with baseline requirements for all licensed firms and enhanced requirements for higher-risk firms.",
+    "The part I find most useful is the idea of graduated autonomy. The SFC suggests starting with low-impact, reversible workflows such as selected back-office processes and surveillance, and applying progressively stronger safeguards to client advice, portfolio decisions and market-facing execution. Its GenAI Sandbox++ is meant to test whether a firm can reconstruct a decision, identify the action taken, explain the outcome and determine who is accountable when something goes wrong.",
+    "From a security and compliance seat, that test is a good checklist for any organization, regulated or not. Classify each agent use case by impact and reversibility before deciding how much it can do alone. Start agents on work that can be undone, and expand scope only after the controls have been proven. Keep logs detailed enough to replay what an agent did and why, not just that a task finished. And name an accountable human owner for every agent, so the question of who answers for an outcome is settled before the outcome happens.",
+    "Specific technical controls are not in the remarks yet, so the guidance itself will be worth reading when it arrives."
+  ],
+  "sources": [
+    {
+      "title": "Securities and Futures Commission - Galvanising Responsible Innovation for Capital Markets through AI and Tokenisation (synopsis of Julia Leung's panel remarks, Hong Kong FinTech Week 2026)",
+      "url": "https://www.sfc.hk/-/media/EN/files/COM/Speech/Synopsis_Panel-remarks-at-Hong-Kong-FinTech-Week-2026_FINAL.pdf?rev=55d68a0257194feeb8b66cd289bcb5e0&hash=0A1E09274854C250B8516DEB16FBE842"
+    },
+    {
+      "title": "The Standard - SFC to offer additional guidance on agentic AI adoption",
+      "url": "https://thestandard.com.hk/finance/article/347221/SFC-to-offer-additional-guidance-on-agentic-AI-adoption"
+    }
+  ]
+}
