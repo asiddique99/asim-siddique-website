@@ -1,0 +1,24 @@
+{
+  "slug": "2026-11-04-ops-teams-run-agent-fleets-before-they-can-see-them",
+  "date": "2026-11-04",
+  "title": "Ops teams run agent fleets before they can see what those agents can do",
+  "summary": "Two new engineering surveys show AI agents are already working in production operations, mostly behind human approval gates. The weak spots are permission visibility, standard guardrails and knowing what the agents cost.",
+  "content": [
+    "AI agents have moved into the part of IT I have spent most of my career in: production operations. Two vendor surveys of engineers, one from Komodor published on November 4 and one from Pulumi, describe what that looks like right now. Both come from companies that sell tools in this space and both are self-reported, so I read them as signals rather than settled fact. The signals point the same way.",
+    "Komodor's 2026 Agentic Operations Survey reached about 1,000 engineering and technology leaders, more than 45% of them director level or higher. Nearly 84% said they run fleets of 10 or more operational agents. The most common uses were routine task automation (49.1%), support ticket triage (47.1%), production remediation and AI SRE work (44.2%) and incident investigation (43.2%). Spending is real too: 68.4% spend at least $10,000 a month on agents, and 5.8% could not say what they spend at all.",
+    "The problems respondents named are the ones a control framework is supposed to answer. Building safe guardrails was the most cited challenge at 53.6%, followed by governance and security at 50.4%. Another 42.7% pointed to insufficient visibility into agent permissions. Most teams are compensating with restrictions: 75.7% keep some limit on autonomous operations, such as read-only access, human approval for changes or keeping agents away from critical workloads.",
+    "Pulumi's State of Agentic Infrastructure 2026, a survey of 510 platform, DevOps and product engineers, shows a similar pattern. Only 19% let agents change production infrastructure autonomously, while 62% allow changes with approval and 10% do not allow it. For governance, 61% use manual review gates and 54% use policy as code in CI, but 33% rely only on post-deploy scanning and 4% have no formal process. Meanwhile 63% say they trust agents to make production changes, which Pulumi itself describes as trust outrunning the guardrails.",
+    "From a security and compliance seat, the approval gate is doing a lot of work here, and it is a human control that does not scale with fleet size. If an organization cannot list what each agent is allowed to touch, it cannot show an auditor that least privilege is in place, and it cannot tell whether an approval is meaningful or a rubber stamp. A post-deploy scan finds a bad change after it has already happened.",
+    "My practical takeaways are simple. Inventory every operational agent with an owner, its credentials and its exact permissions, and review that list on the same cycle as human privileged accounts. Put policy checks before the change, not only after it. Log agent actions separately so incident and audit reviews can tell an agent from a person. And give agent spend the same budget limits and alerts as any other production cost. None of this is new practice. It just needs to cover a new kind of account."
+  ],
+  "sources": [
+    {
+      "title": "GlobeNewswire - Komodor Survey Finds More Than 50% of Engineering Organizations Face Control and Governance Issues as They Scale Agentic Operations",
+      "url": "https://www.globenewswire.com/news-release/2026/11/04/3395406/0/en/komodor-survey-finds-more-than-50-of-engineering-organizations-face-control-and-governance-issues-as-they-scale-agentic-operations.html"
+    },
+    {
+      "title": "Pulumi - State of Agentic Infrastructure 2026",
+      "url": "https://www.pulumi.com/state-of-agentic-infrastructure/"
+    }
+  ]
+}
