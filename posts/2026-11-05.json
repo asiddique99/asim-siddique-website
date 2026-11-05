@@ -1,0 +1,24 @@
+{
+  "slug": "2026-11-05-coding-agents-borrow-developer-identities",
+  "date": "2026-11-05",
+  "title": "AI coding agents are borrowing developer identities, and admin rights with them",
+  "summary": "New vendor data says most firms run AI coding agents nobody approved, often under developers' own admin-level identities. Two launches this week show controls moving to the identity and data layers.",
+  "content": [
+    "Two security vendors shipped AI agent controls this week, and the data they published with them points at the same weak spot. AI agents in software development often do not have identities of their own. They borrow a developer's account, and with it whatever that account can reach.",
+    "BlueFlag Security expanded its AI Agent Governance product on November 4, following its 2026 State of Developer Identity Risk report. According to BlueFlag, 83% of organizations run AI coding agents that no one formally approved, and 56% have autonomous agents operating as their own identity. Among early adopters, the company says AI writes up to 72% of all commits, and in more than one in five organizations an autonomous agent has already merged code with no human in the loop. Where agents work under a developer's identity, BlueFlag says most of those identities hold administrator permissions and are not monitored at all.",
+    "A day later, Cyberhaven launched Agentic Data Security, a module of its data security platform. It aims to find AI tools and agents across endpoints, cloud and browser, record prompts, tool calls, file reads and responses, tie each action to the person or system behind it, and apply existing data policies to agent actions. Cyberhaven Labs reports that endpoint-based agentic AI app adoption doubled year over year, reaching 60% in May 2026. CEO Nishant Doshi said the first agentic data incident at most companies may be an agent doing exactly what it was asked to do, with data it should never have touched.",
+    "These are vendor numbers from vendors selling a fix, so I read them as direction rather than precise measurement. The direction still matters. An unapproved agent running under an admin's credentials is not a new kind of risk. It is an old one: a shared, privileged account with no clear owner and no monitoring.",
+    "From a security and compliance point of view, I would start with three questions. First, inventory: which agents are running in your repositories and pipelines, approved or not? Second, identity: does each agent have its own account with least-privilege rights, or is it riding on a person's admin session, which breaks accountability in the audit trail? Third, change control: can an agent merge to a protected branch without a human review? If the answer is yes, that is a separation-of-duties gap, whoever or whatever wrote the code.",
+    "The fix does not require waiting for new standards. Give agents their own identities, scope them tightly, log what they touch, and keep a human approval step on production changes. The tools launching this week help with discovery. The policy decisions are still ours to make."
+  ],
+  "sources": [
+    {
+      "title": "Help Net Security - BlueFlag Security adds controls for AI agents working under developer identities",
+      "url": "https://www.helpnetsecurity.com/2026/11/04/blueflag-ai-agent-governance/"
+    },
+    {
+      "title": "Help Net Security - Cyberhaven launches Agentic Data Security to track and control AI data use",
+      "url": "https://www.helpnetsecurity.com/2026/11/05/cyberhaven-agentic-data-security/"
+    }
+  ]
+}
