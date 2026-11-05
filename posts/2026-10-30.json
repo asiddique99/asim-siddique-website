@@ -1,0 +1,28 @@
+{
+  "slug": "2026-10-30-akamai-agent-sandbox-puts-a-wall-around-agent-written-code",
+  "date": "2026-10-30",
+  "title": "Akamai puts a wall around the code AI agents write",
+  "summary": "Akamai's new Agent Sandbox runs agent-generated code in a separate WebAssembly environment with limits on compute, memory, outbound connections and system access. It is a sign that containment is becoming a standard layer of agent deployments.",
+  "content": [
+    "This week Akamai launched two products in beta: Akamai Inference, a managed service for running open-weight and custom models, and Agent Sandbox, an isolated environment for running the code that AI agents write. For anyone responsible for security, the sandbox is the more interesting of the two.",
+    "According to Techzine and SecurityBrief, Agent Sandbox runs agent-written code in its own environment, separate from the agent's runtime, which itself runs on Akamai Functions. Isolation is based on WebAssembly and ships as an open-source component of the Spin framework, which came to Akamai through its acquisition of Fermyon. The sandbox limits compute, memory, outbound connections and system privileges, and Akamai says it plans to add controls over what agents can access and what can access them. Jon Alexander, Akamai's SVP of Cloud Technology, put it simply: every team running agents needs a boundary around the code those agents write.",
+    "That framing is right. An agent that can generate and execute code is, in practice, an unreviewed change deployed straight to a runtime. In traditional operations we would never let a developer push code to production without separation of duties, a constrained execution environment and a record of what ran. Agents compress that whole pipeline into seconds, so the controls have to live in the runtime itself.",
+    "The scale of the problem is growing fast. Decrypt, covering the launch as part of a broader wave of agent security spending, cites the Palo Alto Networks 2026 Identity Security Landscape report: across 2,930 security leaders, organizations average 109 machine identities per human, 79 of them AI agents, and expect agent identities to grow 85% over the next 12 months compared with 56% for human identities. The same article notes that Palo Alto (through CyberArk and Koi) and Cisco (through Astrix Security) have bought their way into agent privilege and credential governance this year.",
+    "My practical takeaways from a security and compliance seat: First, treat agent-generated code as untrusted input, and run it somewhere that cannot reach production data or credentials by default. Second, deny outbound network access unless a specific destination is needed, the same egress rule we apply to hardened servers. Third, set resource quotas so a looping agent fails safely instead of consuming shared capacity. Fourth, log what executed and where, because an auditor will ask, and the agent's own summary of what it did is not evidence.",
+    "Sandboxing is not a complete answer. It does not decide what an agent should be allowed to do or replace identity and access management for the agent itself. But it is the same least-privilege thinking we already apply to every other workload, and it is good to see it arriving as a default building block rather than an afterthought."
+  ],
+  "sources": [
+    {
+      "title": "Techzine - Akamai launches AI inference service and agent sandbox",
+      "url": "https://www.techzine.eu/news/infrastructure/145346/akamai-launches-ai-inference-service-and-agent-sandbox/"
+    },
+    {
+      "title": "SecurityBrief Australia - Akamai launches AI inference and agent sandbox tools",
+      "url": "https://securitybrief.com.au/story/akamai-launches-ai-inference-agent-sandbox-tools"
+    },
+    {
+      "title": "Decrypt - AI agents are creating a new layer of cybersecurity spending",
+      "url": "https://decrypt.co/381987/ai-agents-creating-new-layer-cybersecurity-spending"
+    }
+  ]
+}

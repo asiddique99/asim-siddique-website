@@ -1,0 +1,28 @@
+{
+  "slug": "2026-11-02-ai-agents-need-a-budget-and-an-off-switch",
+  "date": "2026-11-02",
+  "title": "AI agents need a budget and an off switch before they scale",
+  "summary": "Oliver Wyman finds 54% of CIOs with scaled agents have already blown an AI budget, and Salesforce is adding hard spending limits and a kill switch to Agent Fabric. Cost caps and stop controls are becoming basic agent governance.",
+  "content": [
+    "Most of the agent governance discussion I read is about access: what an agent can touch and who approved it. Two recent pieces made me think the conversation needs to include money and the ability to stop an agent quickly, because those two controls are where a lot of rollouts are running into trouble.",
+    "Oliver Wyman's October 19 analysis of how IT organizations should govern and fund agentic AI, drawing on its 2026 surveys of CEOs and tech leaders, reports that 54% of CIOs with scaled agents say they have materially exceeded an AI budget ahead of plan. The authors say faulty design and poor optimization can raise token consumption five to 30 times, even for a simple query. Only 22% budget run costs as a distribution with an automatically enforced cap, while 25% still use a single point estimate. On the positive side, 63% of CIOs enforce per-agent budget caps and a kill switch, and 35% rely on dashboards alone. Oliver Wyman did not publish sample sizes, so I treat these as directional.",
+    "McKinsey's July report on managing AI demand pointed the same way: in its May 2026 survey of 75 respondents, 93% had exceeded their AI budgets, and it recommended caps on retries, tool calls, agent loops and escalation paths, along with token budgets and spend thresholds enforced by policy.",
+    "Vendors are now building these controls into their platforms. VentureBeat reported on October 27 that Salesforce is expanding MuleSoft Agent Fabric with evaluations that can trigger shutdowns. A basic kill switch has been generally available since September and can block governed traffic at the request, session, agent or tenant level, then restore access later. A Triggered-Agent Kill Switch that ties evaluation results to policy-driven intervention is scheduled for January 2027. Its Model Wallet sets dollar or token budgets by provider or model with daily, weekly or monthly limits.",
+    "From an operations and compliance seat, my takeaways are practical. Treat a runaway agent like a runaway batch job: give it a hard resource ceiling, not just a report someone reads the next morning. Put a per-agent spending cap in place before production, and make the cap enforce itself. Test the kill switch the way you test a disaster recovery runbook, at each level you plan to use, and confirm the restore works too. Make cost one of the fields in your agent inventory alongside owner and scope, so access reviews can see both. And log every stop and restart, because an auditor will want to know who pulled the switch and why.",
+    "Budgets and off switches are not exciting features, but they are what lets an organization say yes to more agents with confidence."
+  ],
+  "sources": [
+    {
+      "title": "Oliver Wyman - How should IT organizations govern and fund agentic AI?",
+      "url": "https://www.oliverwyman.com/our-expertise/insights/2026/oct/it-organizations-govern-fund-agentic-ai.html"
+    },
+    {
+      "title": "VentureBeat - Salesforce expands Agent Fabric with AI evaluations to trigger shutdowns when agents fail",
+      "url": "https://venturebeat.com/orchestration/salesforce-details-cost-controls-and-kill-switch"
+    },
+    {
+      "title": "McKinsey - The cost of intelligence: How CIOs can manage AI demand at scale",
+      "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-cost-of-intelligence-how-cios-can-manage-ai-demand-at-scale"
+    }
+  ]
+}

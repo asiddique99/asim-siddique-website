@@ -1,0 +1,28 @@
+{
+  "slug": "2026-10-29-ai-agents-reach-legacy-systems-before-controls",
+  "date": "2026-10-29",
+  "title": "AI agents are reaching legacy systems before the controls do",
+  "summary": "Three surveys released in the last ten days point the same way: AI agents are already working in legacy, OT and non-API systems, while visibility, approval and revocation controls lag behind. Here is what that means for teams that run older platforms.",
+  "content": [
+    "Much of my career has been spent on older enterprise platforms and middleware, so one number from the latest round of agent surveys stood out to me. In RealVNC's 2026 Agentic AI Survey of IT and technical decision-makers in the US, UK and Canada, 71.4% of organizations said they have AI agents interacting with legacy, OT or non-API systems. Where agents are actively used on those systems, 59.5% act without prior human approval and only 21.5% of organizations can revoke that access.",
+    "ServiceNow's report, Deployed but Ungoverned: The State of Agentic Security, based on more than 3,700 senior security and technology leaders in 20 countries, tells a similar story. 82% of organizations have agents operating in or interacting with OT or physical environments, and 29% found unknown or unregistered agents running in production. Only 19% can see more than 90% of their agents in real time, and 66% cannot automatically act when an agent behaves anomalously. Just 39% have a framework that covers documentation and audit trails for agent activity.",
+    "Redwood Software's survey of 300 senior technology, risk and AI leaders adds the cost side. 77% said their organizations had experienced negative consequences from ungoverned AI agents, most often unexpected cloud costs, followed by operational disruption and compliance issues. More than 80% said existing systems and infrastructure were a bigger barrier to scaling AI than a lack of strategy.",
+    "Put together, the pattern is clear. Agents are being pointed at the systems that run the business, and many of those systems were never designed to tell a person from an automated caller. When an agent drives a terminal session or a remote desktop instead of a documented API, the usual controls get thin: there may be no scoped token to revoke, no per-call log, and no rate limit. RealVNC also reported that organizations with agents running without formal IT or security approval reported incidents at 56.2%, against 11.7% for those without. It describes that as an association, not proven cause, but it is worth taking seriously.",
+    "From a security and compliance point of view, my practical takeaways are simple. Give every agent that touches a legacy or OT system its own named, non-shared account, so its activity is attributable in the logs you already review. Put a revocation path in place before go-live and test it, the same way you would test a disaster recovery runbook. Keep an inventory that includes agents nobody formally approved, because the surveys say they are there. And where a system cannot log agent actions natively, capture the session at the access layer so auditors have evidence.",
+    "Note that all three reports come from vendors with products in this space, and RealVNC did not publish its sample size. The direction still matches what least-privilege practice would predict: access that cannot be seen or revoked will eventually be misused, whether the caller is a person or an agent."
+  ],
+  "sources": [
+    {
+      "title": "PRWeb - Many Organizations Let AI Agents Act, But Few Can Stop Them (RealVNC 2026 Agentic AI Survey)",
+      "url": "https://www.prweb.com/releases/many-organizations-let-ai-agents-act-but-few-can-stop-them-302922038.html"
+    },
+    {
+      "title": "Smart Industry - ServiceNow research warns of ungoverned agentic AI risks",
+      "url": "https://www.smartindustry.com/industry-news/news/55413614/servicenow-research-warns-of-ungoverned-agentic-ai-risks"
+    },
+    {
+      "title": "CFO Dive - Agentic AI fallout hits 77% of firms, survey finds",
+      "url": "https://www.cfodive.com/news/77percent-enterprises-report-fallout-ungoverned-ai-agents/872836/"
+    }
+  ]
+}

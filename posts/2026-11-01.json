@@ -1,0 +1,28 @@
+{
+  "slug": "2026-11-01-ubs-staff-run-12700-personal-ai-agents",
+  "date": "2026-11-01",
+  "title": "UBS staff now run 12,700 personal AI agents. Who do they act for?",
+  "summary": "UBS reported more than 12,700 personal AI agents in daily use by employees. A new NIST post on agent identity design describes the controls that kind of rollout needs, starting with linking every agent to the person it works for.",
+  "content": [
+    "When UBS published its third-quarter 2026 results on October 28, the AI section included a number that caught my attention. Employees are running more than 12,700 AI personal agents to support their daily work. The bank also reported 608 live AI use cases in production, up 81% year on year, more than 1,090 further applications in development, and over 18,000 developers using AI tools in their software development cycles.",
+    "That is a different kind of adoption from the centrally built agents most governance programs are designed around. A personal agent works for one employee, on that employee's tasks, often with that employee's access. Multiply that by thousands and the question for a security team shifts from approving a handful of agents to governing a population. PYMNTS, covering the release, noted that the bank did not report governance or oversight details for these agents. That is common in earnings material, and I would not read anything into it, but it is the part practitioners will want to understand.",
+    "The timing is useful, because on October 27 NIST's cybersecurity team published ten design tenets for agent identity management systems. Several of them map directly onto personal agents. Agents should have their own verifiable identities, separate from humans and service accounts. They should stay linked to the person or organization that started the task, and any authority passed down to sub-agents should only narrow, never expand. Agents should hold no standing privileges while idle, and access should be short-lived and revocable, with each action checked at runtime.",
+    "NIST also makes two points I wish every vendor demo addressed. The part of the system that decides what an agent may do should be separate from the part that decides what it attempts, so prompt injection cannot change its permissions. And records of the agent's identity, delegated intent and actions should be tamper-evident and kept independent of the agent.",
+    "From a compliance and operations seat, my takeaways for anyone heading toward personal agents at scale are these. Give each personal agent its own identity tied to its owner, so the audit log shows both. Make sure the agent can never hold more access than its owner, and less wherever possible. Tie the agent to the joiner, mover and leaver process, so a role change or departure narrows or removes it automatically. Set clear thresholds for actions that require human review. And keep agent activity logs outside the agent's control.",
+    "Thousands of personal agents can be a real productivity gain. The controls just need to scale with them."
+  ],
+  "sources": [
+    {
+      "title": "UBS - UBS's third-quarter 2026 results",
+      "url": "https://www.ubs.com/global/en/media/display-page-ndp/en-20261028-3q26-quarterly-result.html"
+    },
+    {
+      "title": "PYMNTS - UBS Employees Run 12,700 AI Agents as Bank Automation Accelerates",
+      "url": "https://www.pymnts.com/news/banking/2026/ubs-employees-run-12700-ai-agents-as-bank-automation-accelerates/"
+    },
+    {
+      "title": "NIST - Design tenets for agent identity management systems",
+      "url": "https://nist.gov/blogs/cybersecurity-insights/design-tenets-agent-identity-management-systems"
+    }
+  ]
+}

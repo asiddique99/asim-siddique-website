@@ -1,0 +1,24 @@
+{
+  "slug": "2026-10-31-forgotten-ai-agents-still-hold-the-keys",
+  "date": "2026-10-31",
+  "title": "Forgotten AI agents still hold the keys",
+  "summary": "A new Arrakis Security report found that about 76% of enabled AI agents it examined had not run in 60 days, yet many still held live credentials and triggers. Agent offboarding needs the same discipline as employee offboarding.",
+  "content": [
+    "Most conversations about AI agent risk focus on what an active agent might do. A report from Arrakis Security, covered by Help Net Security this week, points at a quieter problem: agents that nobody uses anymore but that are still switched on and still connected to company systems.",
+    "Arrakis analyzed thousands of agents in customer production environments over 12 weeks. About 76% of the enabled agents had not run in 60 days, and 44% had not run in 180 days. The report notes that some agents run on weekly, monthly or quarterly schedules, so not every quiet agent is abandoned. But about a quarter of the dormant agents could still be started through an unsigned webhook from outside the organization. Across all agents, 22.9% had at least one unsecured trigger, 19% used API keys or tokens that never expired and were embedded in their configurations, and 70% connected to at least one sensitive integration. Of those, 99.4% had no verified data loss prevention coverage on that connection. Overall, 82% of agents had at least one recorded exposure.",
+    "Arrakis CEO Tal Baron summed up the cause: when an agent stops being used, nobody removes anything, because in most companies nobody owns it. That sentence will be familiar to anyone who has run an access review. We have spent decades learning that orphaned service accounts and accounts of departed employees are a favorite path for attackers. A dormant agent with stored credentials is the same problem, with the added risk that anyone who finds its trigger URL can put it to work.",
+    "Vendors are starting to build for the full agent lifecycle. IBM announced general availability of IBM Agent Identity on October 26. It keeps a central inventory of agents with ownership, risk classification, approved tool connections and lifecycle state, issues short-lived task-scoped tokens, and uses HashiCorp Vault to broker just-in-time credentials that expire quickly and are logged. Whatever tool an organization picks, those are the right building blocks.",
+    "From a security and compliance seat, my practical takeaways are simple. Every agent needs a named human owner recorded in an inventory, and an agent without an owner should be disabled. Add agents to the periodic access recertification you already run for service accounts, and flag any agent that has not run within its expected schedule. Replace embedded, non-expiring keys with short-lived credentials from a vault. Require authentication on every webhook or trigger. And when a project ends, decommissioning should mean revoking the agent's credentials and connections, not just turning off the screen people used to talk to it.",
+    "Offboarding is not exciting work, but it is where a lot of real-world breaches start. Agents should not get an exception."
+  ],
+  "sources": [
+    {
+      "title": "Help Net Security - Forgotten AI agents may still access sensitive company data",
+      "url": "https://www.helpnetsecurity.com/2026/10/26/arrakis-dormant-ai-agent-risks-report/"
+    },
+    {
+      "title": "IBM - IBM Agent Identity is now generally available: Building trust for the agentic era",
+      "url": "https://www.ibm.com/new/announcements/ibm-agent-identity-is-now-generally-available-building-trust-for-the-agentic-era"
+    }
+  ]
+}
