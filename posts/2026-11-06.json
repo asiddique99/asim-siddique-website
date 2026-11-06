@@ -1,0 +1,23 @@
+{
+  "slug": "2026-11-06-agent-guardrails-move-into-the-execution-path",
+  "date": "2026-11-06",
+  "title": "Agent guardrails are moving out of the prompt and into the execution path",
+  "summary": "New releases from Microsoft and CloudBolt check what an AI agent may do at the moment it acts, not in what it was told. That is where control belongs, and it maps to controls security teams already run.",
+  "content": [
+    "Two announcements on November 5 point in the same direction. Vendors are moving AI agent controls away from instructions and prompts and toward the point where an action actually executes. I think that shift matters more than any single feature in either release.",
+    "Microsoft's November security update describes Dynamic Permissions, which gives an agent its own permissions scoped to its current task and only for as long as the task requires. A companion signal, Dynamic Agent Risk, assesses whether the agent's authority still fits its behavior and context, and Dynamic Conditional Access can respond by narrowing permissions, restricting resources, or requiring human approval for higher-impact actions. Microsoft also says Execution Containers, an operating-system-enforced containment layer for local agents with least-privilege controls over files, networks and processes, are now generally available, and that Defender now discovers more than 50 local AI agents and their configured MCP servers on Windows and macOS.",
+    "CloudBolt took a similar approach for infrastructure work. Its cloud management platform now maps each agent through OAuth to a named user, with no shared service account, and lets administrators set an AI permission per action. Power, snapshot and resize can be allowed while deleting a server stays people-only. The platform checks every agent action against permissions and policies when it runs, which the company says applies regardless of how the request was worded or which model sent it. The release cites Deloitte's 2026 State of AI in the Enterprise: 74% of leaders expect at least moderate agent use by 2027, but only 21% have a mature governance model for agentic AI.",
+    "From a compliance point of view, this is the right design. A prompt is not a control. It cannot be audited the way a policy decision can, and it can be overridden by injected text. An enforcement point that sits on the execution path, logs who the agent acted for, and denies by default is something an auditor can test. It also lines up with familiar least-privilege requirements, such as access limited to what a task needs and privileged functions kept behind approval.",
+    "My practical takeaway is to ask one question of every agent platform under review: where is the decision made? If the answer is \"the model decides,\" treat the agent as holding every permission its credential allows. Inventory comes first, as Microsoft's own guidance notes, but inventory without an execution-time check only tells you what might go wrong. Start with the destructive actions, keep them human-only, and make sure every allowed action leaves a record tied to a named owner."
+  ],
+  "sources": [
+    {
+      "title": "Microsoft Security Blog - What's new in Microsoft Security: November 2026",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/11/05/whats-new-in-microsoft-security-november-2026/"
+    },
+    {
+      "title": "GlobeNewswire via FinancialContent - CloudBolt Adds New AI Agent Governance Capabilities to Its Cloud Management Platform",
+      "url": "https://www.financialcontent.com/article/gnwcq-2026-11-5-cloudbolt-adds-new-ai-agent-governance-capabilities-to-its-cloud-management-platform"
+    }
+  ]
+}
