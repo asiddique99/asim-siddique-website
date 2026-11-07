@@ -1,0 +1,28 @@
+{
+  "slug": "2026-11-07-uk-regulators-treat-ai-agents-like-employees",
+  "date": "2026-11-07",
+  "title": "UK regulators say a business answers for its AI agent like an employee",
+  "summary": "The UK CMA's guidance on AI agents, updated alongside a joint DRCF statement on 30 October, puts liability for agent behaviour squarely on the business that deploys it. Here is what that means for testing, monitoring and vendor checks.",
+  "content": [
+    "On 30 October 2026, the members of the UK Digital Regulation Cooperation Forum, which brings together the CMA, FCA, ICO and Ofcom, published a joint statement on protecting people and businesses in an agentic AI economy. According to Insurance Edge's summary, it describes the work each regulator already has underway, how they plan to collaborate with each other and with government as personal AI agents spread, and how existing legal frameworks already apply to those agents. The message is that agents are not waiting for a new rulebook. The current one covers them.",
+    "The same day, the Competition and Markets Authority updated its guidance, Complying with consumer law when using AI agents, first published in March. Its central line is plain: a business is responsible for what an AI agent does in the same way it is responsible for what an employee does. That holds even when a third party designed or supplies the agent. The guidance closes the point bluntly: if an agent does something illegal, the business will be responsible.",
+    "The stakes are concrete. The CMA notes that breaching consumer protection law can lead to fines of up to 10% of worldwide turnover, plus compensation to consumers. The laws it names already exist, including the Digital Markets, Competition and Consumers Act 2024 and the Consumer Rights Act 2015.",
+    "What the CMA asks for will look familiar to anyone who has worked in controls and audit. Test agents before deployment. Monitor them regularly to confirm they behave as intended and stay within the law, since some models hallucinate. Keep a human in the loop. Act quickly when an agent misbehaves, with more urgency when many people or vulnerable customers are affected. Be open with customers that they are dealing with AI, and do not overstate what it can do. And check that a third-party provider trained the agent properly, because outsourcing the agent does not outsource the duty.",
+    "From a security and compliance point of view, I read the employee comparison as a useful framing for internal programs, not just a legal warning. We already know how to govern employees: defined roles, least-privilege access, supervision, logged actions and a way to suspend someone quickly. An agent deployed against customers deserves the same treatment, with an owner of record, documented scope, evidence of pre-production testing, ongoing monitoring tied to alerts, and a tested kill switch. Vendor risk reviews should also ask how a supplier's agent was trained and tested, because the regulator will ask you.",
+    "The guidance is UK consumer law, so its direct reach is limited. But when four regulators agree that existing frameworks already apply, organizations elsewhere should assume their own regulators will reason the same way, and build the evidence trail now."
+  ],
+  "sources": [
+    {
+      "title": "GOV.UK (Competition and Markets Authority) - Complying with consumer law when using AI agents",
+      "url": "https://www.gov.uk/government/publications/complying-with-consumer-law-when-using-ai-agents/complying-with-consumer-law-when-using-ai-agents"
+    },
+    {
+      "title": "GOV.UK (Competition and Markets Authority) - Using AI agents: complying with consumer law",
+      "url": "https://www.gov.uk/government/publications/complying-with-consumer-law-when-using-ai-agents"
+    },
+    {
+      "title": "Insurance Edge - UK Govt Publishes Statement on Regulating Agentic AI",
+      "url": "https://insurance-edge.net/2026/11/02/uk-govt-publishes-statement-on-regulating-agentic-ai/"
+    }
+  ]
+}
