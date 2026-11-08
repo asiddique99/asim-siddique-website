@@ -1,0 +1,24 @@
+{
+  "slug": "2026-11-08-attackers-adopt-agents-to-hunt-leaked-secrets",
+  "date": "2026-11-08",
+  "title": "Attackers are adopting AI agents too, and leaked secrets are the first target",
+  "summary": "Microsoft says threat actors used an agentic framework to search GitHub for exposed keys, then sign in to cloud tenants and pull secrets from Key Vault, in one case within five minutes. Secret hygiene now has to move at agent speed.",
+  "content": [
+    "Most of what I write here is about how organizations adopt AI agents. This week Microsoft published a reminder that the other side is adopting them as well. On November 5, Microsoft Threat Intelligence described threat actors using an agentic offensive security framework called ARTEX to search public GitHub repositories for exposed secrets, including application credentials and API keys for AI services.",
+    "According to Microsoft, the framework started sending large volumes of GitHub queries in August 2026, often pairing a target organization's name with secret keywords and cloud or AI provider terms. From as early as October 28, it used valid leaked or stolen application credentials to sign in to Entra ID tenants and the Azure and Microsoft 365 resources behind them. Service principal sign-ins succeeded on dozens of applications across multiple tenants. In one case, a credential for a vendor-owned multitenant application was compromised at the source and used against downstream customers.",
+    "The detail that stood out to me was the speed and the self-correction. Microsoft describes the agent hitting HTTP 400 errors from wrong API versions and retrying with a supported version within roughly 30 to 80 seconds. In one case it went from searching GitHub for client secrets to exfiltrating Key Vault data in five minutes. It also looked specifically for credentials tied to AI services.",
+    "This lands at an awkward moment for defenders. A PYMNTS Intelligence report released the same day found that nine in 10 large US enterprises score below 25 on its 100-point index of agentic AI use. Many organizations are still early in using agents themselves, while attackers are already using them to automate the slow parts of an intrusion.",
+    "From a security and compliance seat, the lesson is not new, but the timeline is. Microsoft's own wording is plain: publicly exposed credentials remain usable until revoked or rotated, and deleting a file does not remove copies in history, caches or logs. If an agent can find and test a key in minutes, a rotation process that takes days is a gap. Microsoft's guidance is familiar: scan repositories with push protection, move OAuth apps from client secrets to managed identities, and apply least privilege to service principals.",
+    "My practical takeaway is to treat non-human credentials as an inventory you can audit, not something scattered across repos and pipelines. Know which service principals exist, who owns each one, what it can reach, and how fast you can revoke it. Microsoft also suggests a useful hunt: one IP authenticating to three or more service principals with mixed success. Failed sign-ins with an invalid or expired secret mean someone outside already holds a credential for your app."
+  ],
+  "sources": [
+    {
+      "title": "Microsoft Security Blog - Threat actors use agentic AI tooling to find and abuse exposed secrets",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/11/05/threat-actors-use-agentic-ai-tooling-to-find-and-abuse-exposed-secrets/"
+    },
+    {
+      "title": "PYMNTS - How Large US Companies Put AI Agents to Work",
+      "url": "https://www.pymnts.com/news/artificial-intelligence/2026/how-large-us-companies-put-ai-agents-to-work/"
+    }
+  ]
+}
