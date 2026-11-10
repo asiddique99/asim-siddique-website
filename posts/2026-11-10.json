@@ -1,0 +1,28 @@
+{
+  "slug": "2026-11-10-china-is-giving-ai-agents-identity-codes",
+  "date": "2026-11-10",
+  "title": "China is giving AI agents identity codes, and devices must carry them",
+  "summary": "A new MIIT notice says AI agents built into phones, tablets and smartwatches shall carry an identity code. It builds on a national guidance standard for agent identity. The idea of a registered, verifiable agent identity is worth borrowing.",
+  "content": [
+    "On 6 November 2026, China's Ministry of Industry and Information Technology published Notice No. 42 (2026). According to Ray Sun's Ctrl+AI+Reg newsletter, it says AI agents built into phones, tablets and smartwatches shall carry an identity code. Devices that ship with pre-installed agents must also pass agent compatibility verification under relevant standards, a fraud-risk security assessment and anti-fraud capability testing before they get network-access approval.",
+    "The notice sits on top of a standards effort that started earlier this year. Ken Huang describes GB/Z 185, a seven-part national guidance standard for AI agent interconnection published by the SAC/TC 28 committee. It covers agent identity codes, identity management, description, discovery, interaction and tool invocation. AI Weekly, citing reporting on the release, describes the goal as a closed-loop system in which agents carry unified identifiers across domains.",
+    "The identity design is concrete. In Huang's reading of the standard, an agent's code is a hierarchical identifier under a national agent root node. It separates the registrar, the requester, the program and the specific running instance. Trust rests on public-key certificates from nationally recognized certification authorities, with private keys held in an HSM or a trusted execution environment. Authentication is challenge-response, and a delegation chain leads back to the human who authorized the agent.",
+    "There are open questions. Huang points out that a GB/Z document is guidance, not a mandatory GB standard. AI Weekly notes that reporting did not say who issues and manages the codes or what oversight covers the registry. Huang also says he found no adversarial threat model in the standard and that privacy gets less attention than it should. The MIIT notice is what turns part of this into a requirement for device makers.",
+    "From a security and compliance point of view, the useful part is not the national registry. It is the idea that every agent instance should have its own identity, tied to a key it cannot easily leak, and traceable to the person who delegated authority to it. Most enterprise agents I read about today run under a shared service account or a borrowed user token. That makes least privilege hard to enforce and audit trails hard to read.",
+    "My takeaway for teams adopting agents: do not wait for a regulator in your own market. Give each agent and each running instance a distinct, credentialed identity in your identity provider. Record who delegated authority to it, and log actions against that identity. If a rule like Notice No. 42 reaches your industry later, you will already have the inventory and the trail it asks for."
+  ],
+  "sources": [
+    {
+      "title": "Ctrl+AI+Reg (Ray Sun) - Passports for bots: China's gameplan to control AI agent identity",
+      "url": "https://techieray.substack.com/p/passports-for-bots-chinas-gameplan"
+    },
+    {
+      "title": "Ken Huang - China Shipped a National Standard for Agent Identity. We Had Proposed the Same Thing a Year Earlier.",
+      "url": "https://kenhuangus.substack.com/p/china-shipped-a-national-standard"
+    },
+    {
+      "title": "AI Weekly - China Issues First National Standard for AI Agent Identity",
+      "url": "https://aiweekly.co/alerts/china-issues-first-national-standard-for-ai-agent-identity"
+    }
+  ]
+}
