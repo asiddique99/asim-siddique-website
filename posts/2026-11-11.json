@@ -1,0 +1,24 @@
+{
+  "slug": "2026-11-11-customer-ai-agents-are-already-logging-in-to-your-site",
+  "date": "2026-11-11",
+  "title": "Your customers' AI agents are already logging in, often unannounced",
+  "summary": "New Cequence data shows consumer AI agents signing in, booking and buying for customers, many without identifying themselves. Scoped jobs and per-action checks cut out-of-scope attempts from 44% to 1% in a controlled study.",
+  "content": [
+    "Most of the agent adoption conversation is about agents a company builds and runs itself. A report released today by Cequence Security, developed with input from KPMG in Singapore, looks at the other side: agents that your customers send to your website. Many of them are already here, and many do not say who they are.",
+    "In one week of October 2026, Cequence's research team tracked more than a quarter million AI agent visits across five industries. About one in seven of those visits booked, bought, signed in or managed an account on the customer's behalf. At a Tier 1 telecommunications carrier, traffic from agents that did not identify themselves grew from about 100 requests a day to as many as 32,000 within three weeks of a major consumer AI agent's launch. Those agents signed in as the customer and passed multi-factor authentication.",
+    "The same data shows why unlabeled agent traffic is a security problem and not only a capacity one. At one online marketplace, more visits claimed to be \"Google-Agent\" than all the genuine agent visits Cequence tracked that week, and every one of them failed at the sign-in page. Cequence reads that as attackers testing stolen passwords behind a trusted agent name, and notes that Google was not involved. If you allow traffic based on a self-declared agent label, you have built an exception that credential stuffing will find.",
+    "The report also includes a controlled study on Cequence's own prototype. Agents given only logins and fixed permissions tried to act outside their job in 44% of runs. With a defined job and every action checked against it, those attempts fell to 1%, and task completion rose from 76% to 95%. This is vendor data without a published sample size, so I treat the exact numbers with caution, but the direction matches long-standing access control practice.",
+    "This lines up with a broader picture of where adoption stands. PYMNTS Intelligence reported last week that even the most advanced large US companies in its index have not reached widespread independent execution by AI. Enterprises are moving carefully with their own agents, while consumer agents are arriving at their front door on someone else's schedule.",
+    "From a security and compliance point of view, my takeaways are practical. Add agent traffic to your authentication monitoring and baseline it per application, so a jump from 100 to 32,000 requests is an alert, not a surprise. Never grant trust on a self-declared agent name alone. And review whether a session started by an agent should carry the same authority as one started by the customer. As Cequence's CTO put it, an approval at step one should not carry into step five. Least privilege now has to cover a user who is not a person."
+  ],
+  "sources": [
+    {
+      "title": "GlobeNewswire - Cequence Security and KPMG Collaborate on Joint Report Examining how Organizations can Govern and Secure Agentic AI",
+      "url": "https://globenewswire.com/news-release/2026/11/11/3400523/0/en/cequence-security-and-kpmg-collaborate-on-joint-report-examining-how-organizations-can-govern-and-secure-agentic-ai.html"
+    },
+    {
+      "title": "PYMNTS - How Large US Companies Put AI Agents to Work",
+      "url": "https://www.pymnts.com/news/artificial-intelligence/2026/how-large-us-companies-put-ai-agents-to-work/"
+    }
+  ]
+}
