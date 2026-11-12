@@ -1,0 +1,28 @@
+{
+  "slug": "2026-11-12-ai-agent-oversight-tax-buyers-want-control",
+  "date": "2026-11-12",
+  "title": "Watching AI agents is now a line item, and buyers want control over autonomy",
+  "summary": "G2 data shows 31% of organizations spend six or more hours a week supervising AI agents, and enterprise reviewers ask for explanations and guardrails far more than for full autonomy. Oversight needs to be designed in, not bolted on.",
+  "content": [
+    "Most of the talk about AI agents is about what they can do on their own. Two recent pieces of G2 research point the other way. The cost that is showing up in practice is the human time spent watching agents, and what enterprise buyers are asking for is better ways to see and steer them.",
+    "G2's 2026 AI Agents report, based on a July 2026 survey of 1,019 B2B decision-makers, found that 66% of companies have agents in limited or scaled production. It also found that 31% of organizations have employees spending six or more hours a week supervising agents, rising to 40% at large enterprises. And 45% said oversight and rework eat more than a quarter of the productivity gains they expected. HRD Canada's coverage of the report calls this the distrust tax: the cost of running agents an organization does not yet trust to work alone.",
+    "The governance numbers explain part of it. Among organizations with agents in production, 38% run more than 100 of them, yet 47% say ownership and controls are informal or handled department by department. Only 27% keep a central agent registry, and 14% monitor agent behaviour, costs or risks in real time. When you cannot see what an agent did, a person ends up checking its work by hand.",
+    "A separate G2 analysis of 3,222 reviews from companies with more than 1,000 employees shows what users want instead. Only 7% would give their agent total autonomy. Sixty percent prefer autonomy with guardrails, 21% limited autonomy and 11% a human in the loop every time. Asked what would raise their trust, 79% picked a visibility or control fix: explain decisions (32%), more guardrail settings (29%) or a warning before questionable actions (18%). Only 21% asked for better reliability. G2 notes these reviews are self-selected, so I read them as direction rather than precise measurement.",
+    "From a security and compliance seat, this matches what audit work has always required. A control nobody can evidence is a control that someone re-performs manually, and that is exactly what six hours a week of supervision looks like. The fix is the same one we use for privileged accounts: an inventory of every agent with a named owner, scoped permissions, logs that record what the agent decided and why, and alerts on actions outside its normal pattern.",
+    "If your organization is counting agent ROI, count the oversight hours too. Then spend on the things that shrink them: a registry, decision logging, guardrail settings and real-time monitoring. Trust that can be shown in a log is cheaper than trust that has to be re-checked by a person every week."
+  ],
+  "sources": [
+    {
+      "title": "SaaStr - G2's 2026 AI Agents Report: Only 9% of Buyers Think Seat Pricing Is Fair, 57% Want Usage-Based, and 74% Will Shop You at Renewal",
+      "url": "https://saastr.com/g2s-2026-ai-agents-report-only-9-of-buyers-think-seat-pricing-is-fair-57-want-usage-based-and-74-will-shop-you-at-renewal"
+    },
+    {
+      "title": "HRD Canada - What's preventing employers from full RTO on AI agents?",
+      "url": "https://www.hcamag.com/ca/news/general/whats-preventing-employers-from-full-rto-on-ai-agents/593704"
+    },
+    {
+      "title": "G2 - Stop Selling Autonomy: What 3,222 Enterprise Reviews Say AI Agent Buyers Want",
+      "url": "https://learn.g2.com/ai-agent-adoption-trends-enterprises-2026"
+    }
+  ]
+}
