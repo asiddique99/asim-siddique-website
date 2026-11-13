@@ -1,0 +1,27 @@
+{
+  "slug": "2026-11-13-agents-are-live-but-few-can-tie-them-to-profit",
+  "date": "2026-11-13",
+  "title": "Most enterprises have AI agents live, but few can tie them to profit",
+  "summary": "A new Genpact survey of over 2,000 executives finds 79% have AI agents in production, yet only 15% have fully linked AI spending to P&L outcomes. Deploying agents is no longer the hard part. Running them is.",
+  "content": [
+    "Genpact released a report on November 12 called \"Autonomy in Practice,\" based on a poll of more than 2,000 senior executives at companies with $1 billion to over $50 billion in annual revenue, across 17 industries. As reported by The Cryptonomist, 79% of those enterprises now have AI agents in production. Only 15% have fully linked their AI investment to profit and loss outcomes, and only 20% use agents broadly and consistently across functions.",
+    "The other numbers explain the gap. On average, 49% of AI initiatives funded in the previous 24 months met their expected value. Only 9% said they had completed substantial changes to their operating models. Genpact's CTO, Sanjeev Vohra, summed it up: \"Enterprises have become effective at deploying AI agents. Running them is the hard part.\" I read that as an operations problem, not a technology problem. A pilot proves an agent can do a task. Production asks who owns it, who checks it, and what it is worth.",
+    "The survey also shows how much decision work is shifting. AI now leads or fully handles 40% of decisions, more than twice the share a year earlier. Yet people make or audit the decision in at least 87% of cases at each stage, and 92% of respondents with agents in production kept or grew human headcount. The group Genpact rates as leaders assigns named owners and specific P&L lines to AI gains, and applies security and governance across the whole agent lifecycle rather than only at launch.",
+    "Vendors are building toward the same point. Zingtree's new platform for regulated contact centers runs required steps such as identity verification and policy thresholds as deterministic flows outside the model, checks each action against guardrails before it executes, and logs every answer and action so each decision can be audited. Vanta, launching AI Governance at VantaCon on November 12, cited its own job data showing AI security engineer and architect roles have tripled so far in 2026 compared with all of 2025.",
+    "From a security and compliance seat, my takeaway is simple. An agent in production should have the same paperwork as any other production system: a named owner, a defined business outcome, a documented set of permissions, and logs an auditor can read. If you cannot say which P&L line an agent serves, you also cannot say what level of access or risk it justifies. Value tracking and access review are the same conversation, and both belong in the change record before go-live."
+  ],
+  "sources": [
+    {
+      "title": "The Cryptonomist - Enterprise AI adoption: 79% have agents live, but just 15% tie spend to profits",
+      "url": "https://en.cryptonomist.ch/2026/11/12/enterprise-ai-adoption/"
+    },
+    {
+      "title": "GlobeNewswire - Zingtree Launches First Agentic Governance and Orchestration Platform Built for Contact Centers & Customer Operations in Complex, Regulated Industries",
+      "url": "https://www.globenewswire.com/news-release/2026/11/10/3399502/0/en/zingtree-launches-first-agentic-governance-and-orchestration-platform-built-for-contact-centers-customer-operations-in-complex-regulated-industries.html"
+    },
+    {
+      "title": "SiliconANGLE - Vanta launches AI Governance, Risk Quantification and a Vanta Agent for entire jobs",
+      "url": "https://siliconangle.com/2026/11/12/vanta-launches-ai-governance-risk-quantification-and-a-vanta-agent-for-entire-jobs/"
+    }
+  ]
+}
