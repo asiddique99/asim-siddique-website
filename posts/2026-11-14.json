@@ -1,0 +1,24 @@
+{
+  "slug": "2026-11-14-ai-agents-in-hr-autonomy-is-permission-not-a-legal-shield",
+  "date": "2026-11-14",
+  "title": "When an AI agent acts on employees, the employer still answers for it",
+  "summary": "A new Littler report on agentic AI in the workplace argues that autonomy is a grant of permission, not a transfer of responsibility. HR agents that screen, schedule and flag performance carry the same legal exposure as the people they replace.",
+  "content": [
+    "Law firm Littler published a long report on November 3 called Agentic AI in the Workplace. It is written for employers, not technologists, and it reads like a checklist of what goes wrong when an agent starts making decisions that touch people's jobs. One line sums it up: \"Agentic AI may compress a workflow, but it does not compress the legal principles governing the outcome.\"",
+    "The report pulls together adoption figures from other surveys. It cites Gartner's 2026 CIO survey, which expects AI agent deployment to rise from 17% in 2026 to more than 60% within two years. It also notes that 74% of organizations expect to use AI moderately in the next two years, while only 13% think they have the right governance in place. Recruiting is described as the most mature use case, with performance management, HR service delivery and scheduling close behind. Scheduling matters because it \"directly affects hours and pay.\"",
+    "The point I keep coming back to is the report's phrase \"Autonomy is not intelligence; it is permission.\" It adds that an agent's authority is defined by what its permissions allow, not by what the task requires. Anyone who has worked on least-privilege access will recognize that. An agent with write access to an HR system can change records whether or not anyone intended it to. The report also warns that agents watching employee activity \"often double as monitoring tools,\" which brings in notice and surveillance rules.",
+    "Accountability is the other theme. The report suggests a simple test: before the agent acts, who has the authority, and after it acts, who can explain why? It says an answer like \"the agent said that should be the result\" is unlikely to satisfy a just cause review. It also notes that California will require CalWARN notices to include more information when a layoff is caused in whole or in substantial part by AI, beginning January 1, 2027.",
+    "Okta's AI Agents at Work 2026 survey, published in May, shows why this is not theoretical. Only 34% of organizations said they apply the same security controls to their agentic labor force as to their human labor force, and 58% of executives reported an AI-related security incident or close call in the past year.",
+    "My practical takeaway from a compliance seat: treat every HR agent as a privileged identity. Separate read access from the authority to change records or send messages, as Littler recommends. Log each action with the human owner who approved the deployment, so an auditor can trace a decision back to a person. Make sure someone can pause the workflow and reverse what the agent did. If you cannot answer who had the authority and who can explain the outcome, the agent is not ready to act on employees."
+  ],
+  "sources": [
+    {
+      "title": "Littler - Agentic AI in the Workplace Report 2026",
+      "url": "https://littler.com/sites/default/files/2026-11/agentic-ai-in-the-workplace.pdf?lec6tn7bd="
+    },
+    {
+      "title": "Okta - AI Agents at Work 2026: Securing the agentic enterprise",
+      "url": "https://www.okta.com/newsroom/articles/ai-agents-at-work-2026-agentic-enterprise-security/"
+    }
+  ]
+}
