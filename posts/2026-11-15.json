@@ -1,0 +1,32 @@
+{
+  "slug": "2026-11-15-bank-examiners-now-have-a-playbook-for-ai-agents",
+  "date": "2026-11-15",
+  "title": "Bank examiners now have a playbook for AI agents",
+  "summary": "The OCC gave national bank examiners a framework for reviewing agentic AI. It tiers agents by consequence and autonomy, and points to controls compliance teams already know: inventories, least privilege and a working kill switch.",
+  "content": [
+    "On November 4 the Office of the Comptroller of the Currency issued Bulletin 2026-54, a supervisory framework that tells national bank examiners how to evaluate a bank's use of generative and agentic AI. The OCC now calls this technology \"Super Intelligence,\" following a recent executive order, but the subject is the same AI agents most enterprises are piloting today. The bulletin is careful to say it does not establish supervisory expectations for banks. It is a resource for examiners. In practice, that is the checklist the people across the table will be holding.",
+    "The core idea is tiering by consequence, not by technical sophistication. The bulletin says risk classification may rest on potential consequences, transfer of agency, and the degree of human oversight, and that control intensity could rise with the consequences of an agent's failure or misuse. Agent risk is meant to fit inside existing model risk, technology, compliance and operational risk practices.",
+    "The Cloud Security Alliance's analysis of the full framework document shows how concrete this gets. It describes four illustrative tiers, with an autonomous customer-facing payment agent placed in the critical tier regardless of how well it performs in testing. It lists containment tools such as circuit breakers, rate limits, least-privilege permissions and kill switches, and notes that agent credentials may be governed in a manner comparable to privileged users. It also reports that the framework warns against human review that is no more than a nominal click, and prefers repeated testing over a single successful run.",
+    "This lines up with what enterprises say about themselves. A TCS study of 1,333 senior leaders across 25 countries found that only 10% let AI agents execute decisions without human approval across multiple business functions, and only 9% have agents that can securely orchestrate workflows across enterprise applications. Security, risk and governance ranked ahead of cost and speed as the factors shaping adoption.",
+    "From a compliance and operations point of view, I read this as a preview of audit questions that will spread beyond banking. Can you produce an inventory of every agent, with a risk tier you can defend? Does each agent run under its own attributable, least-privilege identity, reviewed like any privileged account? Has the emergency stop actually been exercised, or only documented? Can you show how many approvals a reviewer clears per hour, and how often they override the agent?",
+    "None of these require new technology. They are the same controls we already apply to privileged access, change management and disaster recovery, pointed at a new kind of actor. Organizations that map their agents into those existing programs now will have a much easier conversation when the examiner, or the auditor, asks."
+  ],
+  "sources": [
+    {
+      "title": "OCC - Bulletin 2026-54: Super Intelligence: Supervisory Framework",
+      "url": "https://www.occ.gov/news-issuances/bulletins/2026/bulletin-2026-54.html"
+    },
+    {
+      "title": "OCC - OCC Issues Supervisory Framework on Bank Use of Super Intelligence",
+      "url": "https://www.occ.gov/news-issuances/news-releases/2026/nr-occ-2026-97.html"
+    },
+    {
+      "title": "Cloud Security Alliance - OCC Bulletin 2026-54: Examiner Framework for Agentic AI in Banking",
+      "url": "https://labs.cloudsecurityalliance.org/research/csa-research-note-occ-bulletin-2026-54-ai-supervision-202611/"
+    },
+    {
+      "title": "Tech Critter - Latest TCS study finds enterprises are still hesitant to give AI agents more autonomy despite productivity gains",
+      "url": "https://www.tech-critter.com/tcs-study-enterprises-ai-agents-autonomy-productivity/"
+    }
+  ]
+}
