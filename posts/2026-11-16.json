@@ -1,0 +1,24 @@
+{
+  "slug": "2026-11-16-ai-agent-traces-are-sensitive-data",
+  "date": "2026-11-16",
+  "title": "An AI coding agent breach shows that agent traces are sensitive data",
+  "summary": "Cursor's post-mortem traces a marketplace attack back to a vendor key and a bucket of coding agent traces that held unredacted credentials. Agent activity logs deserve the same protection as the secrets inside them.",
+  "content": [
+    "On November 13, Cursor published a post-mortem on the security incident it first disclosed in late October, when a tampered copy of Anthropic's Claude Code extension showed up in the Cursor extension marketplace. For anyone running AI agents, the useful lesson is where the attack started: with the agent's own activity records.",
+    "According to Cursor, the attacker obtained an access key that Cursor had issued to Fireworks, an inference vendor, and that key was exposed on the Fireworks side. The key opened a read-only storage bucket Cursor used to share data with that vendor. The bucket held limited coding agent traces, mostly from 2025, from sessions not in Privacy Mode that Cursor was permitted to use for model training. A small number of those traces contained unredacted credentials. Cursor says fewer than 0.01 percent of customers had API credentials exposed.",
+    "From there the attacker used stolen credentials to reach select SaaS tools, including archived non-production repositories, some support data and email conversations, and summaries of some agent conversations. On October 29 it placed tampered copies of the Claude Code extension, versions 2.1.312 and 2.1.313, directly on the cache serving Cursor's marketplace. Cursor says the build was available for about 11 hours and at most 5,000 users who requested those cached versions could have received it. Anthropic did not publish the copies, and the upstream Open VSX registry never carried the malware.",
+    "Cursor's response followed a familiar playbook at scale. It moved all inference traffic off Fireworks and deactivated the vendor key, rotated exposed and then all internal credentials, rebuilt the marketplace, added secret scanning across repositories and other internal data sources, and redeployed production infrastructure. It says release signing keys, production systems and Privacy Mode data were not affected.",
+    "My takeaway from a security and compliance seat is that agent traces need to be classified as sensitive data. An agent that runs commands, reads config files and calls APIs will record whatever it touched, including secrets a developer pasted or a tool printed. If those traces are then shared with a model or inference vendor, they inherit that vendor's key hygiene. Before approving any agent tool, I would ask where its traces are stored, who they are shared with and under what contract, whether secrets are redacted before they leave, how long they are kept, and whether the keys granting vendor access are scoped, short-lived and monitored.",
+    "The second lesson is about extension supply chains. Agents now arrive as extensions, and a cache in front of a trusted registry is as much a control point as the registry itself. Pinning versions, verifying publishers and keeping an inventory of which agent extensions are installed on which machines are basic controls that make an incident like this one much easier to scope."
+  ],
+  "sources": [
+    {
+      "title": "Cursor - An update on our recent security incident",
+      "url": "https://cursor.com/blog/security-incident-update"
+    },
+    {
+      "title": "DEV Community - AI Daily Digest, November 16, 2026: Poppy Protocol Hits 1.0, Runway Opens Robot Weights, Cursor Maps Its Supply-Chain Breach",
+      "url": "https://dev.to/hiroki-ii-ai/ai-daily-digest-november-16-2026-poppy-protocol-hits-10-runway-opens-robot-weights-cursor-45j9"
+    }
+  ]
+}
