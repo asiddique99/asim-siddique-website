@@ -1,0 +1,24 @@
+{
+  "slug": "2026-11-17-ai-in-auditor-reviewed-numbers-needs-an-evidence-trail",
+  "date": "2026-11-17",
+  "title": "AI is shaping the numbers auditors review, but the evidence trail lags",
+  "summary": "BDO's 2026 Audit Innovation Survey finds 99% of finance leaders use AI on at least one estimate or judgment their external auditor reviews, yet only 49% can explain and substantiate every AI-assisted output.",
+  "content": [
+    "Most of the AI agent debate I follow is about customer service bots and coding assistants. A new survey from BDO points somewhere more consequential: the estimates and judgments that end up in audited financial statements. BDO's third annual Audit Innovation Survey, released on November 4, reports that 99% of finance leaders say their organization uses AI to generate or inform at least one financial estimate or judgment reviewed by its external auditor.",
+    "The uses are not trivial. According to BDO, 62% apply AI to cash flow or earnings forecasts, 55% to tax provisions or deferred tax calculations, 54% to fair value measurements or asset valuations, and 50% to credit loss allowances. Agents are close behind: 47% are already piloting or deploying agentic AI, and another 46% are evaluating it for the finance function.",
+    "The gap is in proof. Only 49% say they have the documentation and processes needed to explain and substantiate all AI-assisted outputs, while 46% can explain most outputs but still have gaps. Seventeen percent say their AI ambitions are moving faster than the data infrastructure and governance needed to support them. Finance leaders also see the risk on the other side of the table: 86% worry that overreliance on AI could reduce human judgment in the audit.",
+    "BDO's Demetrios Frangiskatos framed the shift as a move from asking which technology a company uses to asking whether the outcome can be trusted. That matches how audit works in practice. An auditor does not accept a number because a system produced it. They want to know what data went in, what logic was applied, who reviewed it and whether the process was the same last quarter. An agent that pulls data, runs a model and drafts a journal entry has to leave that trail, or the work gets redone by hand.",
+    "From a compliance seat, my takeaway is to treat AI-assisted estimates like any other key control. Version the prompts, models and parameters used for each estimate. Log the input data sources and the agent's actions under a distinct identity, not a shared service account. Keep a named human approver for every output that feeds a reported number, and retain the evidence for the same period as your other financial records. Test that you can reproduce a prior quarter's output before the auditor asks.",
+    "The survey also shows how far the profession is from the next step. Only 6% say their organization is ready for continuous auditing today, and respondents named better internal data infrastructure (71%), stronger AI governance (63%) and clearer regulatory guidance (62%) as prerequisites. The organizations that build the evidence trail now will be the ones ready when that changes."
+  ],
+  "sources": [
+    {
+      "title": "BDO USA - BDO Research: AI Moves Into High-Stakes Financial Judgments, Raising the Bar for Governance",
+      "url": "https://www.bdo.com/insights/press-releases/bdo-research-ai-moves-into-high-stakes-financial-judgments-raising-the-bar-for-governance"
+    },
+    {
+      "title": "CPA Practice Advisor - AI Moves Into High-Stakes Financial Judgments, Raising the Bar for Governance",
+      "url": "https://cpapracticeadvisor.com/2026/11/05/ai-moves-into-high-stakes-financial-judgments-raising-the-bar-for-governance/193281"
+    }
+  ]
+}
