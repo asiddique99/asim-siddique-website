@@ -1,0 +1,28 @@
+{
+  "slug": "2026-11-18-know-your-agent-banks-must-verify-agent-authority",
+  "date": "2026-11-18",
+  "title": "Know your agent: banks now have to verify who an AI agent speaks for",
+  "summary": "Regulators in Hong Kong and the US are converging on one question: when an AI agent acts on a customer account, who authorized it and who answers for it? Hong Kong calls the answer Know Your Agent.",
+  "content": [
+    "For decades banks have run Know Your Customer checks. This month regulators started saying the same thing about software. On 16 November, Hong Kong's Financial Secretary Paul Chan told the Bloomberg Global Regulatory Forum that banks will now need to know their agent as well: who it is, what it is authorised to do, and how a person steps in when something goes wrong. An algorithm has no licence to lose and no reputation to protect. The institution has both.",
+    "The Hong Kong Monetary Authority has already turned that idea into a program. On 2 November it launched Project SAGE, short for Securing Agentic Finance with Governance and Enablement, along with an Agentic Finance Expert Group of banks, technology providers, professional firms and academics. One of its four focus areas is agent identity, including verifying agents' identities and delegated authority through Know Your Agent practices and authentication mechanisms. The others cover use cases from consumer payments to treasury and machine-to-machine payments, interoperability standards, and legal questions of governance, liability and consumer protection.",
+    "Adoption is not hypothetical. Chan cited a Securities and Futures Commission survey of large financial firms in which three in ten already use AI agents, and said Hong Kong's joint supervisory sandbox has selected 36 projects on AI agents for testing.",
+    "The same day in Milan, according to PYMNTS, Federal Reserve Governor Michael Barr said major banks were seeing AI agents attempt actions in retail customer accounts without being able to verify authenticity, customer consent, or whether the action matched the customer's instructions. He called for strict authentication, explicit consent verification for specific actions, and technical controls that limit what agents can do. PYMNTS framed the common thread as two problems: keeping institutions accountable for the agents they deploy, and knowing whether an agent acting for a customer actually has authority to move money.",
+    "From where I sit in security and compliance, this is an identity and access problem we already know how to describe, even if the tooling is new. An agent arriving at your front door is a non-human principal presenting a delegation. The questions are the familiar ones: who issued the credential, what scope it carries, when it expires, and whether a high-risk action needs a fresh, specific consent rather than a standing one. The gap I see is logging. If your audit trail records only the customer's session, you cannot later prove whether the customer or an agent acting in their name made the call.",
+    "A practical starting point: inventory where agent traffic can already reach customer accounts, decide which actions require step-up confirmation from a human, and make sure the logs capture the agent's identity and the delegation it presented alongside the customer's."
+  ],
+  "sources": [
+    {
+      "title": "Hong Kong Monetary Authority - HKMA launches Project SAGE and establishes Expert Group for agentic finance",
+      "url": "https://www.hkma.gov.hk/eng/news-and-media/press-releases/2026/11/20261102-4/"
+    },
+    {
+      "title": "Hong Kong SAR Government - Keynote speech by FS at Bloomberg Global Regulatory Forum 2026",
+      "url": "https://www.info.gov.hk/gia/general/202611/16/P2026111600447.htm"
+    },
+    {
+      "title": "PYMNTS - Regulators Converge on Twin Compliance Challenges From AI Agents",
+      "url": "https://www.pymnts.com/news/artificial-intelligence/2026/regulators-converge-on-twin-compliance-challenges-from-ai-agents/"
+    }
+  ]
+}
