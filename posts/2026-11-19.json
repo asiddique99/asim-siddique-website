@@ -1,0 +1,28 @@
+{
+  "slug": "2026-11-19-open-agent-standards-are-becoming-a-procurement-question",
+  "date": "2026-11-19",
+  "title": "Open agent standards are becoming a procurement question",
+  "summary": "MCP and Agent Skills now sit under the Linux Foundation's Agentic AI Foundation. Neutral governance lowers lock-in risk, but identity and authorization for agents are still working-group topics, not finished specs.",
+  "content": [
+    "A lot of enterprise hesitation about AI agents is not about the models. It is about building critical workflows on plumbing that one vendor controls. A Google Open Source Blog interview published on November 11 put that plainly. Kurtis Van Gent of Google Cloud, who co-maintains the Model Context Protocol and the Agent Skills specification, said organizations are understandably hesitant to build critical workflows on a specification controlled by a single vendor.",
+    "Both specifications now live in the Agentic AI Foundation, a Linux Foundation project. According to the Google post, Anthropic donated Agent Skills to the foundation alongside MCP, and engineers from Google, Anthropic, OpenAI and others now maintain it under vendor-neutral governance. Van Gent compared the foundation to the CNCF, which gave container orchestration a neutral home. The post also notes that the July 2026 MCP specification moved the protocol to a stateless model, and that the next work on Agent Skills is packaging, discovery, naming conflicts and versioning. The spec does not yet standardize how collections of skills are bundled.",
+    "The membership list explains why this matters for buyers. When the Linux Foundation announced the foundation in December 2025, its platinum members were AWS, Anthropic, Block, Bloomberg, Cloudflare, Google, Microsoft and OpenAI, with gold members that included IBM, Oracle, Salesforce, SAP, Cisco and Okta. The release said there were more than 10,000 published MCP servers and that MCP had been adopted by Claude, Cursor, Microsoft Copilot, Gemini, VS Code and ChatGPT. Bloomberg's statement committed to helping MCP be used securely and in compliance with the requirements of regulated financial services.",
+    "Here is the part I would flag for any security team. Neutral governance reduces lock-in risk. It does not give you a finished control framework. The foundation's own site lists an Identity and Trust working group focused on delegation protocols, cross-domain identity and how permissions flow across agent-to-agent interactions, plus separate groups for security and privacy, observability and traceability, and regulatory alignment that names the EU AI Act. Those are the right topics. They are also, by definition, still being worked out.",
+    "So my practical takeaway is to treat standards as a procurement and architecture question now. When you evaluate an agent platform, ask which open specifications it implements and which version, and whether its tools and skills would move to another platform without a rewrite. Then assume the identity and authorization layer is yours to build for the time being. Google's own example of a database skill includes configuring IAM database authentication, which is a reminder that the existing identity system still carries the load. Inventory every MCP server your agents can reach, put each one under change control like any other integration, and log tool calls so an auditor can trace what an agent did and on whose authority.",
+    "Open standards will make agents easier to adopt and easier to swap. Least privilege, change management and audit trails are still on us."
+  ],
+  "sources": [
+    {
+      "title": "Google Open Source Blog - Scaling AI agents with open standards: Kurtis Van Gent on MCP and Agent Skills joining the AAIF",
+      "url": "https://opensource.googleblog.com/2026/11/scaling-ai-agents-open-standards-mcp-aaif.html"
+    },
+    {
+      "title": "The Linux Foundation - Linux Foundation Announces the Formation of the Agentic AI Foundation (AAIF)",
+      "url": "https://www.linuxfoundation.org/press/linux-foundation-announces-the-formation-of-the-agentic-ai-foundation"
+    },
+    {
+      "title": "Agentic AI Foundation - Home and working groups",
+      "url": "https://aaif.io/"
+    }
+  ]
+}
