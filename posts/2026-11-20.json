@@ -1,0 +1,23 @@
+{
+  "slug": "2026-11-20-confident-on-agents-but-overspending-and-walking-away",
+  "date": "2026-11-20",
+  "title": "Confident on AI agents, yet overspending and walking away from projects",
+  "summary": "A new SnapLogic survey of 1,000 IT leaders finds high confidence in scaling AI agents, but 89% report agent overspend and 54% have abandoned AI projects over unclear value. Cost and access controls need the same rigor as policy.",
+  "content": [
+    "A survey released on November 17 caught my attention because its numbers point in two directions at once. SnapLogic's 2026 Agentic Enterprise Readiness Index, conducted by 3GEM in July and August, asked 1,000 IT decision-makers in the United States, the United Kingdom and Germany how ready they are for AI agents. Most said they are very ready. Many also said they have already walked away from projects.",
+    "On the confident side, 85% said they are extremely or very confident in their ability to scale AI adoption, and 93% said they have a comprehensive AI-agent policy or framework, or one covering most of the business. Ninety percent said they trust, or would trust, the work agents produce. On the other side, 54% said they have abandoned AI projects because business value was unclear, 48% struggle or expect to struggle to measure ROI from agentic AI, and half feel pressure to keep investing even when value is hard to prove. One caution: the release's body says AI projects in general, while its headline narrows that to agentic AI, and SnapLogic sells integration products for agents.",
+    "The cost findings are the part I would put in front of a steering committee. 89% reported some level of AI-agent overspend, and 64% called it moderate or significant. Most said budget ownership is clear and that they can measure the cost of individual agents, yet only 42% said they can accurately forecast future AI and token spending. 36% said AI investment is moving faster than their ability to govern and operationalize agents. A policy document does not stop a runaway loop of model calls at two in the morning.",
+    "Gartner's Arun Chandrasekaran made a related point at the Gartner IT Symposium/Xpo in Kochi on November 18, warning that market hype around AI agents may lead to sterile AI investments without clear business value. He urged organizations to pick use cases that fit what agents can actually do, and to test agent behavior in software simulation environments before deployment.",
+    "From a security and operations point of view, one more number stands out: 77% said their agents have, or would have, full or extensive access to the data and systems they need. Broad access and weak spend forecasting are the same problem seen from two angles. In both cases the agent can do more than anyone planned for. My practical takeaway is to treat an agent like any other privileged workload. Give it a named owner, scope its access to the task, set hard limits on tokens and spend per agent and alert on breaches, and define the business measure before go-live. If the measure cannot be defined, that is a good reason not to start, which is far cheaper than abandoning the project later."
+  ],
+  "sources": [
+    {
+      "title": "SnapLogic via GlobeNewswire - New Research Reveals 54% of Enterprises Have Abandoned Agentic AI Projects Due to Unclear Business Value",
+      "url": "https://www.globenewswire.com/news-release/2026/11/17/3404301/0/en/new-research-reveals-54-of-enterprises-have-abandoned-agentic-ai-projects-due-to-unclear-business-value.html"
+    },
+    {
+      "title": "Gartner - Gartner IT Symposium/Xpo 2026 Kochi: Day 3 Highlights",
+      "url": "https://www.gartner.com/en/newsroom/press-releases/2026-11-18-gartner-it-symposium-xpo-2026-kochi-day-3-highlights"
+    }
+  ]
+}
