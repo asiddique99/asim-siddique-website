@@ -1,0 +1,24 @@
+{
+  "slug": "2026-11-21-ai-agents-headcount-cuts-and-the-rehiring-trap",
+  "date": "2026-11-21",
+  "title": "AI agents and headcount: the cut fast, rehire later trap",
+  "summary": "Gartner finds 21% of service leaders cut staff because of AI, and some are already rehiring. Workers say training lags. Removing people before an agent is proven is an operational risk, not a cost saving.",
+  "content": [
+    "Most of the debate about AI agents and jobs is still forecasts. This month Gartner published something more concrete. In a survey of 275 customer service and support leaders, run in July and August 2026, 21% said their organizations had reduced human agent headcount because of AI. Among those, the average cut was 16.7% of the workforce over the previous 18 months.",
+    "The more interesting numbers are the ones that come after the cut. 7% of the surveyed leaders said their organizations had already rehired human workers after earlier reductions, and 11% said they plan to rehire within the next 18 months. Gartner predicts that half of the companies that cut customer service staff because of AI will rehire by 2027, and it calls this the \"cut fast, rehire later\" trap. Most leaders are reshaping work rather than replacing people at scale: 45% report a hiring freeze, 71% are moving human agents into different roles within service and support, and more than half have hired specialized staff to support AI initiatives.",
+    "The worker side of the picture comes from ZipRecruiter's 2026 AI Worker Report, based on a survey of more than 1,500 US workers in September. 82.5% report some level of AI use in their roles, but only 28.9% say they receive extensive training from their employer, and 37.2% are learning the tools entirely on their own. Among entry-level workers, 54.7% self-teach. 25.1% say they plan to leave their current job because of how their employer views or uses AI.",
+    "Put those together and the risk is clear. An organization can remove the people who know how a process really works, hand the work to an agent, and then discover the edge cases the agent cannot handle. The people who would have caught those cases are gone, and the people who remain were never trained to supervise the agent.",
+    "From an operations and compliance point of view, I would treat a headcount reduction tied to an agent the same way I treat retiring a system: not until the replacement has run in parallel and passed. That means documented procedures for the tasks the agent now owns, a named human owner for its output, an escalation path that still has people on the other end, and a fallback plan if the agent has to be switched off. It also means keeping some of the people who understand the exceptions, because they will write the test cases and review the audit trail.",
+    "Agents can add real capacity. But capacity you cannot fall back from is a single point of failure, and rehiring under pressure is usually slower and more expensive than keeping the knowledge in the first place."
+  ],
+  "sources": [
+    {
+      "title": "Gartner - Gartner Survey Finds 21% of Service and Support Leaders Have Reduced Human Agent Headcount Because of AI",
+      "url": "https://www.gartner.com/en/newsroom/press-releases/2026-11-05-gartner-survey-finds-21-percent-of-service-and-support-leaders-have-reduced-human-agent-headcount-because-of-ai"
+    },
+    {
+      "title": "ZipRecruiter Economic Research - Better Work, More to Learn: The 2026 AI Worker Report",
+      "url": "https://www.ziprecruiter-research.org/economic-insights-research/2026-ai-worker-report"
+    }
+  ]
+}
