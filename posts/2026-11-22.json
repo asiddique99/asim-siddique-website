@@ -1,0 +1,31 @@
+{
+  "slug": "2026-11-22-agent-permissions-checked-at-the-moment-of-action",
+  "date": "2026-11-22",
+  "title": "Agent access is moving from sign-in checks to checks at the moment of action",
+  "summary": "Microsoft's Ignite 2026 Agent 365 update and new Cequence and KPMG research point the same way: approving an AI agent once at sign-in is not enough. Each action needs its own check.",
+  "content": [
+    "For most of my career, access control has meant two moments: when an account is provisioned and when it signs in. AI agents are breaking that model. An agent signs in once and then takes dozens of actions, often on behalf of a person, across tools nobody listed at approval time. Two items from the past two weeks show where the industry is heading.",
+    "At Ignite on November 17, Microsoft said organizations have registered more than 50 million agents in Agent 365 since its May 2026 launch. Agents connected from platforms such as Salesforce Agentforce, Amazon AgentCore, Google Vertex AI, ServiceNow and others now receive a Microsoft Entra Agent ID, with that rollout set to complete in December. The more telling change is in Conditional Access: dynamic controls for agents evaluate at the point of action, not only at sign-in. Microsoft also made local agent discovery in Defender and runtime protection for local agents on Windows generally available, while dynamic agent risk scoring and Purview data loss prevention for agents moved to preview.",
+    "Research published by Cequence Security with KPMG in Singapore on November 11 makes the case for this shift with data. In a controlled study using a Cequence research prototype, agents given only logins and fixed permissions acted outside their job in 44% of runs. When each agent had a defined job and every action was checked against it, that fell to 1%, and task completion rose from 76% to 95%. As Cequence CTO Shreyans Mehta put it, an approval at step one should not carry into step five.",
+    "The gap is wide in practice. An earlier EMA survey of 202 IT and security leaders, commissioned by Cequence, found 94% were confident their agents did not have more access than needed, yet only about a third provision agents with least privilege. Only 34% evaluate authorization at the moment an agent attempts an action. 47% cannot reliably inventory their deployed agents, and 46% cannot easily produce a complete 30-day audit trail for a single agent. Nearly 11% let agents inherit the full permissions of whoever deployed them.",
+    "My takeaway from a compliance seat: treat an agent like a privileged service account that changes behavior by the minute. Give each agent its own identity, never the deployer's. Scope it to a written job description and enforce that scope with a control outside the agent. Log every action in a form an auditor can pull for a 30-day window. And when a pilot is shut down, revoke its credentials the same day; decommissioning is a security event, not housekeeping. Vendors are now shipping the plumbing. The hard part is writing the job descriptions and owning the reviews."
+  ],
+  "sources": [
+    {
+      "title": "Microsoft Community Hub - What's new in Microsoft Agent 365: Ignite 2026",
+      "url": "https://techcommunity.microsoft.com/blog/agent-365-blog/whats-new-in-microsoft-agent-365-ignite-2026/4571753"
+    },
+    {
+      "title": "GlobeNewswire - Cequence Security and KPMG Collaborate on Joint Report Examining how Organizations can Govern and Secure Agentic AI",
+      "url": "https://www.globenewswire.com/news-release/2026/11/11/3400523/0/en/cequence-security-and-kpmg-collaborate-on-joint-report-examining-how-organizations-can-govern-and-secure-agentic-ai.html"
+    },
+    {
+      "title": "SecureWorld - Enterprises Say Their AI Agents Are Secure; the Data Say Otherwise",
+      "url": "https://www.secureworld.io/industry-news/enterprise-ai-agents-governance"
+    },
+    {
+      "title": "Cequence Security - New Cequence & EMA Research: 94% of Enterprises Trust Their AI Agents Aren't Over-Provisioned. Only 33% Actually Enforce It",
+      "url": "https://www.cequence.ai/news/ai-agent-governance-research/"
+    }
+  ]
+}
