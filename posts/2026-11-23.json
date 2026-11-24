@@ -1,0 +1,28 @@
+{
+  "slug": "2026-11-23-privacy-regulators-set-expectations-for-ai-agents",
+  "date": "2026-11-23",
+  "title": "Privacy regulators set out what they expect from AI agents",
+  "summary": "The Global Privacy Assembly adopted a resolution on privacy-protective agentic AI in Brussels. It reads like a control checklist: agent inventories, minimal data access, reversible actions, human decision points and logs that are themselves privacy-safe.",
+  "content": [
+    "Last week in Brussels, the Global Privacy Assembly held its 48th annual conference. More than 200 member delegates attended, according to the GPA and the Office of the Privacy Commissioner of Canada. Among the resolutions adopted was one on privacy-protective agentic AI. It was sponsored by seven authorities, including Canada's OPC, the UK ICO, Spain's AEPD and Korea's PIPC, and co-sponsored by nine more, including the EDPS, France's CNIL and Germany's BfDI. The resolution notes that the US Federal Trade Commission abstained.",
+    "The core message is accountability. The resolution says organisations remain accountable for personal data processed through agentic AI, and should not assume these systems will recognise or comply with organisational rules. It covers agents deployed by public and private organisations, not personal use.",
+    "The risks will be familiar to anyone who runs access reviews. Agents call tools dynamically and pass data across multi-party supply chains. Memory can hold data longer than the purpose needs, or leak it when one agent serves many users. Delegated authority raises the question of whether an agent reaches only the minimum data and capabilities it needs. Prompt injection, data poisoning and compromised agents with broad privileges can widen a breach. It also flags agents deployed outside approved channels, bypassing inventories and access controls.",
+    "The recommended measures read like a control checklist. Keep an inventory of approved agents, tools, data sources and permissions, and detect unauthorised deployments. Name accountable owners. Minimise and, where possible, pseudonymise the data an agent can reach. Compartmentalise or disable agent memory. Build in decision points that require a human, and the ability to pause, stop or reverse actions; where feasible, limit agents to actions that can be undone. Test adversarially, monitor in real time, and tell people when they are dealing with an agent. Where an agent makes a decision with legal or similarly significant effect, offer a way to challenge it and review by a qualified human.",
+    "One line deserves attention from audit and logging teams. The resolution asks for records of decisions, tool calls and human interventions, and then says those logging and traceability measures must themselves follow privacy principles: minimisation, purpose limitation, access controls, security and retention. Full agent traces can capture the same personal data the agent touched. Treat them as sensitive records with their own owner and retention schedule, not as debug output.",
+    "A resolution is not a regulation, and the text says further guidance may follow. Still, these are the authorities that investigate complaints. My practical takeaway: map each agent to an owner, a data inventory and a reversible action set now, and put your agent logs under the same retention and access policy as the data they record."
+  ],
+  "sources": [
+    {
+      "title": "Global Privacy Assembly - Resolution on Privacy-protective Agentic AI (PDF)",
+      "url": "https://globalprivacyassembly.com/wp-content/uploads/2026/11/Resolution-on-Privacy-protective-Agentic-AI.pdf"
+    },
+    {
+      "title": "Office of the Privacy Commissioner of Canada - Privacy Commissioner of Canada advances privacy and data protection priorities at the 48th Global Privacy Assembly",
+      "url": "https://www.priv.gc.ca/en/opc-news/news-and-announcements/2026/nr-c_gpa_261119/"
+    },
+    {
+      "title": "Global Privacy Assembly - International authorities gather at the 48th Global Privacy Assembly annual conference",
+      "url": "https://globalprivacyassembly.com/international-authorities-gather-at-the-48th-global-privacy-assembly-annual-conference/"
+    }
+  ]
+}
