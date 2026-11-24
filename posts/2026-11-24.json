@@ -1,0 +1,28 @@
+{
+  "slug": "2026-11-24-ai-agents-fail-quietly-observability",
+  "date": "2026-11-24",
+  "title": "AI agents can fail quietly, and monitoring is starting to catch up",
+  "summary": "Survey data from Splunk and New Relic, plus Elastic's deal for HoneyHive, point the same way: agents in production need tracing and evaluation, not only uptime checks. Too many still run without either.",
+  "content": [
+    "Most of my career has been spent making sure that when a system breaks, someone finds out. With AI agents that is harder than it sounds. An agent can return a clean response, use normal amounts of CPU and still have picked the wrong tool or acted on bad data. This month a few data points made that gap easy to see.",
+    "Splunk's State of Observability 2026 report, released by Cisco on October 20, surveyed 2,050 ITOps and engineering respondents in 10 countries. 87% said monitoring AI is a priority, but 56% cannot measure AI workload metrics such as LLM response quality. 85% said visibility into hallucinations is important, while only 58% said they are effective at it. 83% said they are concerned about the unintended consequences of AI agents. On cost, 55% said they cannot control AI costs and 60% said unexpected billing spikes cause more strain than high baseline costs.",
+    "New Relic's 2026 Observability Forecast, based on 2,575 IT and engineering leaders, puts it more bluntly on its landing page: one in four teams run AI agents unmonitored. The same page reports that 78% of teams see more incidents despite faster coding speeds.",
+    "The vendors are moving to fill the gap. On November 19 Elastic said it has agreed to acquire HoneyHive, a platform for tracing agent workflows and evaluating them before and after deployment. Elastic's announcement states the problem well: failures can be silent, and a system may look healthy even when an agent picks the wrong tool or acts on bad information. Its plan is to bring agent-specific tracing and evaluation into Elastic Observability.",
+    "From a security and compliance point of view, the lesson is that agent monitoring is an audit control, not only an operations tool. If an agent acts with real access, you need a record of what it decided, which tool it called, with which identity, and what data it touched. That trace is what lets you answer an auditor, reconstruct an incident, or prove least privilege was followed. Splunk's survey also found that 81% say monitoring AI workloads increased collaboration between observability and security teams, which matches what that evidence requires.",
+    "My practical takeaways: do not move an agent to production without traces that cover tool calls and the identity used, not just latency and errors. Define what a correct outcome looks like and sample outputs against it on a schedule. Put cost alerts on token spend the way you would on any metered resource. And treat an unmonitored agent the way you would treat an unlogged privileged account, as a finding to close."
+  ],
+  "sources": [
+    {
+      "title": "Cisco Newsroom - Splunk State of Observability 2026: Avoiding the Hidden Costs of AI Agents",
+      "url": "https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2026/m10/splunk-state-of-observability-2026-avoiding-the-hidden-costs-of-ai-agents.html"
+    },
+    {
+      "title": "New Relic - The State of AI & Observability: Insights From 2,500+ Leaders",
+      "url": "https://newrelic.com/resources/report/observability-forecast/2026"
+    },
+    {
+      "title": "Elastic Blog - Elastic and HoneyHive join forces to advance AI observability and evaluation",
+      "url": "https://www.elastic.co/blog/elastic-and-honeyhive"
+    }
+  ]
+}
