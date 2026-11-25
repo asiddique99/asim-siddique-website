@@ -1,0 +1,28 @@
+{
+  "slug": "2026-11-25-insurers-start-underwriting-ai-agents",
+  "date": "2026-11-25",
+  "title": "Insurers are starting to underwrite AI agents, and they want evidence",
+  "summary": "Cyber insurers are writing explicit cover for losses caused by AI agents and pricing it on observability, autonomy and governance. Others are adding exclusions. Either way, agent controls are becoming an insurance question.",
+  "content": [
+    "For most organizations, the question of who pays when an AI agent makes a costly mistake has been left to policies written before agents existed. That is starting to change, and the direction matters for anyone deploying agents in production.",
+    "On November 10, SiliconANGLE reported that cyber insurer Cowbell unveiled a standalone AI liability policy for US small and midsized businesses that deploy AI agents. The trigger is an \"AI Incident,\" which includes model drift and attacks that manipulate an agent. Cowbell's examples are practical: an accounts payable agent that pays a supplier twice, unauthorized usage charges, and a bookkeeping firm's agent that files client tax returns with outdated rates. The policy goes on sale January 1, 2027. What stood out to me is how it will be underwritten: three AI-specific factors covering observability, autonomy and governance.",
+    "The broader market is moving in two directions at once. Insurance Business reported in July on a report from the Artificial Intelligence Underwriting Company, co-authored with researchers from Anthropic and OpenAI, which said more than 90% of insurers' AI agent exposure may sit inside conventional cyber, D&O, general liability and technology E&O policies that were never designed for it. The same article noted a January 2026 ISO form that lets carriers exclude generative AI injury and damage claims under standard general liability policies, and Willis research showing professional liability shifting from silent AI assumptions toward affirmative warranties or absolute exclusions. The article also noted that some in the industry consider the warnings overstated, given AIUC's commercial interest in specialist AI cover.",
+    "Infosecurity Magazine added another wrinkle: even where AI losses are covered, sublimits can shrink the payout. Its example is a tower covering $5 million answering an AI claim with $500,000. It also described an April 2026 case in which a coding agent deleted production databases at PocketOS Software in nine seconds, along with backups.",
+    "From a security and compliance seat, my takeaway is that insurance is turning agent governance into something you have to prove. If underwriters ask about observability, autonomy and governance, the answers come from the same controls auditors already expect: an inventory of agents, a named owner for each, least-privilege credentials, logs that show what an agent did and why, approval gates for high-impact actions, and tested recovery for the systems agents can change. The PocketOS case is a disaster recovery lesson as much as an AI one.",
+    "My practical advice is to read your current cyber, E&O and D&O policies for AI exclusions and sublimits before you expand agent autonomy, and bring your risk manager into agent rollouts early. Coverage terms are being rewritten now, and the organizations with documented controls will be in a better position to negotiate them."
+  ],
+  "sources": [
+    {
+      "title": "SiliconANGLE - Cowbell unveils AI liability insurance for small businesses that deploy AI agents",
+      "url": "https://siliconangle.com/2026/11/10/cowbell-unveils-ai-liability-insurance-for-small-businesses-that-deploy-ai-agents/"
+    },
+    {
+      "title": "Insurance Business - Insurers face hidden AI liability as agent risks multiply",
+      "url": "https://www.insurancebusinessmag.com/us/news/breaking-news/insurers-face-hidden-ai-liability-as-agent-risks-multiply-582433.aspx"
+    },
+    {
+      "title": "Infosecurity Magazine - When AI Causes the Loss, Which Insurance Policy Actually Pays?",
+      "url": "https://www.infosecurity-magazine.com/opinions/ai-loss-insurance-pays/"
+    }
+  ]
+}
