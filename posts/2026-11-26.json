@@ -1,0 +1,32 @@
+{
+  "slug": "2026-11-26-agent-frameworks-are-now-supply-chain-targets",
+  "date": "2026-11-26",
+  "title": "Agent frameworks are now software supply chain targets",
+  "summary": "Two poisoned releases of Microsoft's agent-framework package on PyPI went after cloud and CI credentials. Agent tooling now needs the same supply chain controls as any other critical dependency.",
+  "content": [
+    "On November 17, two unauthorized releases of agent-framework, the Python package for Microsoft's Agent Framework, appeared on PyPI. According to the GitHub advisory GHSA-764m-3ppc-5m73, version 1.26.1 was published at 20:35 UTC and version 1.26.2 at 21:08 UTC. Both have since been removed, and 1.26.0 and earlier are not affected. BleepingComputer and SecurityWeek put the package at roughly 190,000 to 200,000 downloads a month.",
+    "The payload was a credential stealer. The advisory says each wheel added a .pth startup hook that runs every time the Python interpreter starts, even if agent_framework is never imported. It collected environment variables with names containing words like TOKEN, SECRET, KEY, AZURE, AWS, GITHUB and OPENAI, read the environments of other running processes, and copied credential files such as Azure configuration, .npmrc, .netrc, .git-credentials, Docker config and Hugging Face tokens. It also requested Azure managed identity tokens and Azure DevOps OIDC tokens, and the second release added GitHub Actions OIDC tokens. The data was compressed, encoded and posted to an external webhook.",
+    "How the attacker got publishing access is still unknown. SecurityWeek reports that the malicious versions shipped as built packages only, unlike normal releases that include a source distribution, and that researchers found no matching release in Microsoft's source repository. That points to an upload outside the normal release process. Socket also noted that 1.26.2 restored the original __init__.py byte for byte, so a reviewer checking only that file would have missed the hook.",
+    "This matters for agent adoption because agent frameworks sit exactly where secrets pile up. An agent runtime usually holds model API keys, cloud identities and tokens for every tool the agent is allowed to call. The developer laptops and CI runners that build agents hold even more. Compromising the framework is a shortcut to all of it, which is why the payload looked for OpenAI and Foundry keys alongside cloud and pipeline tokens.",
+    "From a security and operations point of view, I would treat agent frameworks as tier-one dependencies. Pin exact versions and verify hashes rather than accepting the latest release. Install from an internal mirror with a short quarantine window for new versions. Prefer packages that publish through trusted publishing with provenance, and alert when a release lacks its usual source distribution. Use short-lived, narrowly scoped credentials for agents and build jobs, and restrict outbound traffic from runners so an unexpected POST to an unknown host fails. Keep an inventory of where each framework version runs so you can answer the first incident question quickly.",
+    "If 1.26.1 or 1.26.2 was installed anywhere, the advisory's guidance is to treat that environment as exposed and rotate every credential it could reach, including CI and GitHub Actions secrets. Then rebuild from a known clean state. Agent governance often focuses on what the agent does at runtime. This incident is a reminder that the code the agent is built from deserves the same scrutiny."
+  ],
+  "sources": [
+    {
+      "title": "GitHub Advisory Database - Malicious code in agent-framework (PyPI), GHSA-764m-3ppc-5m73",
+      "url": "https://github.com/advisories/GHSA-764m-3ppc-5m73"
+    },
+    {
+      "title": "BleepingComputer - Microsoft's Agent Framework PyPI package compromised to steal credentials",
+      "url": "https://www.bleepingcomputer.com/news/security/microsofts-agent-framework-pypi-package-compromised-to-steal-credentials/"
+    },
+    {
+      "title": "SecurityWeek - Microsoft Agent Framework Releases Poisoned With Credential Stealer",
+      "url": "https://www.securityweek.com/microsoft-agent-framework-releases-poisoned-with-credential-stealer/"
+    },
+    {
+      "title": "Socket - Microsoft's agent-framework PyPI package Compromised with Credential Stealer",
+      "url": "https://socket.dev/blog/agent-framework-pypi-package-compromised-with-credential-stealer"
+    }
+  ]
+}
