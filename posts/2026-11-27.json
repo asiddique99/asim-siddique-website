@@ -1,0 +1,27 @@
+{
+  "slug": "2026-11-27-security-teams-deploy-ai-agents-faster-than-they-trust-them",
+  "date": "2026-11-27",
+  "title": "Security teams deploy AI agents faster than they let them act",
+  "summary": "A new survey of 534 security and IT leaders finds AI agents in production at 74% of organizations, up from 36% in May. Fewer than a third let those agents act on their own, and the conditions they set for autonomy read like an audit checklist.",
+  "content": [
+    "Security operations is one of the places where AI agents are arriving fastest. Strike48, a vendor that sells agent orchestration for security and IT, surveyed 534 security and IT leaders and reported on November 18 that agents are now in production at 74% of their organizations, up from 36% in its May survey. It is a vendor survey released as a paid press release, so I treat the exact figures with care, but the direction is hard to miss.",
+    "The more useful number is how little those agents are allowed to do alone. Among teams with agents in production, 47% still have a human execute or pre-approve agent actions, and only 30% allow high or full autonomy. Trust in AI output used to be the top barrier and has dropped to fourth. Data infrastructure now ranks first, with 31% saying they lack it. When it comes to letting agents act, the top concern is regulatory and compliance risk at 46%, followed by agents acting on incomplete or incorrect data at 41%.",
+    "What respondents want before removing the human approval step is telling. 57% want a track record of accuracy in their own environment, 53% want a full audit trail, 46% want technically enforced limits, 44% want a precisely defined scope, and 40% want the ability to reliably reverse actions. That is close to the list an auditor would ask for with any privileged process: evidence it works, logs, hard limits, a defined boundary and a rollback plan.",
+    "The workforce picture is shifting too. In the same survey, 87% say they are changing their entry-level L1 analyst function because of agents, 42% are retraining L1 analysts to supervise agents, and 20% have reduced L1 headcount. Separately, coverage of a 2026 Gartner report by analyst Pete Shoard, published as sponsored content on BleepingComputer, says Gartner predicts security operations teams will have 50% more engineers than analysts by 2028, and that the SOC will not shrink by 2030. It recommends analysts move from alert triage to end-to-end case ownership, and that detection engineering roles cover prompt design, workflow testing and AI output validation.",
+    "My takeaway from a compliance and operations seat is that the autonomy conditions should be written down before the agent goes live, not negotiated afterward. Give each SOC agent its own identity with least-privilege rights, enforce its scope in the tooling rather than in its instructions, log every action it takes, and test that its containment steps can be undone. Then measure its accuracy in your environment for a set period. When those records exist, the decision to loosen human approval becomes an evidence-based change request instead of a leap of faith."
+  ],
+  "sources": [
+    {
+      "title": "Yahoo Finance (GlobeNewswire) - Strike48 Survey Finds AI Agent Adoption in the SOC Doubled in Five Months, but Autonomy Lags",
+      "url": "https://finance.yahoo.com/technology/ai/articles/strike48-survey-finds-ai-agent-140000004.html"
+    },
+    {
+      "title": "BleepingComputer - Gartner Predicts SOCs Will Have 50% More Engineers Than Analysts by 2028",
+      "url": "https://www.bleepingcomputer.com/news/security/gartner-predicts-socs-will-have-50-percent-more-engineers-than-analysts-by-2028/"
+    },
+    {
+      "title": "SC Media - Gartner report outlines evolving roles in AI-enabled security operations centers",
+      "url": "https://www.scworld.com/brief/gartner-report-outlines-evolving-roles-in-ai-enabled-security-operations-centers"
+    }
+  ]
+}
